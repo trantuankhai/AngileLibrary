@@ -160,11 +160,13 @@ public class BookManager extends javax.swing.JFrame {
 			
 		}else if(tfCount.getText().equals("")) {
 			resutl = "Bạn chưa nhập số bản lưu";
-		}else if(tfYear.getText().matches("")) {
-			resutl = "Năm phải là số";
-		}else if(Integer.parseInt(tfYear.getText())>calendar.get(Calendar.YEAR)) {
-			resutl="Năm xuất bản phải nhỏ hơn hoặc bằng năm hiện tại";
-		}else {
+		}
+//		else if(tfYear.getText().matches("")) {
+//			resutl = "Năm phải là số";
+//		}else if(Integer.parseInt(tfYear.getText())>calendar.get(Calendar.YEAR)) {
+//			resutl="Năm xuất bản phải nhỏ hơn hoặc bằng năm hiện tại";
+//		}
+		else {
 			resutl = "Thêm sách thành công";
 		}
 			
