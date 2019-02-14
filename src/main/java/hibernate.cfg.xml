@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+
+        <!-- Database connection settings oracle -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:tuankhai</property>
+        <property name="hibernate.connection.username">libraryManager</property>
+        <property name="hibernate.connection.password">123456</property>
+        <!-- Database connection settings Sql sever -->
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+        <!-- insert UTF-8 -->
+        <property name="hibernate.connection.useUnicode">true</property>
+        <property name="hibernate.connection.characterEncoding">UTF-8</property>
+        <property name="hibernate.connection.charSet">UTF-8</property>
+        <!-- Mapping file -->
+        <mapping class="com.angile.model.TbTheme" />
+        <mapping class="com.angile.model.TbBook" />
+        <mapping class="com.angile.model.TbAuthor" />
+        <mapping class="com.angile.model.TbUser" />
+        <mapping class="com.angile.model.TbPlublishing" />
+        <!--<mapping class="com.angile.model.TbBookAuthor" />-->
+        <!--<mapping class="com.angile.model.TbTemp" />-->
+    </session-factory>
+</hibernate-configuration>
