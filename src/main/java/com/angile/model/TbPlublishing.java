@@ -23,10 +23,50 @@ public class TbPlublishing implements java.io.Serializable
 	private Integer id;
 	@Column(name="NAME_PUBLISHING")
 	private String namePublishing;
+	@Column(name="SDT_PUBLISHING")
+	private String phonePublishing;
+	@Column(name="ADDRESS_PUBLISHING")
+	private String addressPublishing;
+	@Column(name="EMAIL_PUBLISHING")
+	private String emailPublishing;
 
 	public Integer getId()
 	{
 		return id;
+	}
+
+	public TbPlublishing(Integer id, String namePublishing, String phonePublishing, String addressPublishing,
+			String emailPublishing) {
+		super();
+		this.id = id;
+		this.namePublishing = namePublishing;
+		this.phonePublishing = phonePublishing;
+		this.addressPublishing = addressPublishing;
+		this.emailPublishing = emailPublishing;
+	}
+
+	public String getPhonePublishing() {
+		return phonePublishing;
+	}
+
+	public void setPhonePublishing(String phonePublishing) {
+		this.phonePublishing = phonePublishing;
+	}
+
+	public String getAddressPublishing() {
+		return addressPublishing;
+	}
+
+	public void setAddressPublishing(String addressPublishing) {
+		this.addressPublishing = addressPublishing;
+	}
+
+	public String getEmailPublishing() {
+		return emailPublishing;
+	}
+
+	public void setEmailPublishing(String emailPublishing) {
+		this.emailPublishing = emailPublishing;
 	}
 
 	public void setId(Integer id)

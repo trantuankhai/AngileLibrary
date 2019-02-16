@@ -6,8 +6,8 @@
 
         <!-- Database connection settings oracle -->
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:tuankhai</property>
-        <property name="hibernate.connection.username">libraryManager</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@45.117.162.156:1521:orcl</property>
+        <property name="hibernate.connection.username">vimotech</property>
         <property name="hibernate.connection.password">123456</property>
         <!-- Database connection settings Sql sever -->
         <!-- SQL dialect -->

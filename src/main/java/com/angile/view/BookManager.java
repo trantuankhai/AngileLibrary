@@ -35,6 +35,7 @@ import javax.swing.JOptionPane;
  *
  * @author Tuan Khai
  */
+@SuppressWarnings("all")
 public class BookManager extends javax.swing.JFrame {
 
 	/**
@@ -102,10 +103,11 @@ public class BookManager extends javax.swing.JFrame {
 		tfYear.setText(book.getPublishingYear() + "");
 		tfPage.setText(book.getNumberOfPages() + "");
 		tfCount.setText(book.getStorageNumber() + "");
+		tfPrice.setText(book.getPriceBook());
 		if (book.getLanguaage() == 1) {
-			rdoEn.setSelected(true);
-		} else if (book.getLanguaage() == 2) {
 			rdoVn.setSelected(true);
+		} else if (book.getLanguaage() == 2) {
+			rdoEn.setSelected(true);
 		} else {
 			rdoKhac.setSelected(true);
 		}
@@ -167,7 +169,10 @@ public class BookManager extends javax.swing.JFrame {
 //			resutl="Năm xuất bản phải nhỏ hơn hoặc bằng năm hiện tại";
 //		}
 		else {
-			resutl = "Thêm sách thành công";
+//			if(bookServicesImpl.addBook(new TbBook(cboTheme.getSelectedIndex(), cboPublicshing.getSelectedIndex(), tfTitle.getText(), cboAuthor.getSelectedIndex(), tfYear.getText(), tfPage.getText(), tfPrice.getText(), tfCount.getText(),1)){
+//				resutl = "Thêm sách thành công";
+//			}
+			
 		}
 			
 		return resutl;
@@ -252,6 +257,7 @@ public class BookManager extends javax.swing.JFrame {
 			public void mouseClicked(MouseEvent e) {
 				showDetailBook((Integer) tblBook.getValueAt(tblBook.getSelectedRow(), 0));
 				btnEdit.setEnabled(true);
+				btnDelete.setEnabled(true);
 			}
 		});
 		jMenuBar1 = new javax.swing.JMenuBar();

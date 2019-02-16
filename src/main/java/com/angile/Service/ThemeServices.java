@@ -9,6 +9,7 @@ public interface ThemeServices {
 	public boolean addTheme(String name_Theme);
 	public boolean removeTheme(int id_Theme);
 	public boolean editTheme(int id_Theme,String name_Theme);
+	public TbTheme showThemeById(int id_Theme);
 	
 	
 

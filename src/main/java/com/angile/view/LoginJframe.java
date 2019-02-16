@@ -18,6 +18,7 @@ import java.awt.event.ActionEvent;
  *
  * @author Tuan Khai
  */
+@SuppressWarnings("all")
 public class LoginJframe extends javax.swing.JFrame {
 
     /**

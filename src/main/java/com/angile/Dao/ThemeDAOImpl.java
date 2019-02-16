@@ -45,11 +45,11 @@ public class ThemeDAOImpl implements ThemeDAO {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
 			e.printStackTrace();
+			return false;
 		} finally {
 			session.close();
 		}
-		return false;
-	}
+		}
 
 	@Override
 	public boolean removeTheme(int id_Theme) {
@@ -88,6 +88,25 @@ public class ThemeDAOImpl implements ThemeDAO {
 			session.close();
 		}
 		return false;
+	}
+
+	@Override
+	public TbTheme showThemeById(int id_Theme) {
+		Session session = sessionFactory.openSession();
+		TbTheme  theme = null;
+		try {
+			session.getTransaction().begin();
+			  theme = session.get(TbTheme.class, id_Theme);
+			session.getTransaction().commit();
+			return theme;
+		} catch (Exception e) {
+			if(session.getTransaction()!=null)
+				session.getTransaction().rollback();
+			e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return theme;
 	}
 
 }

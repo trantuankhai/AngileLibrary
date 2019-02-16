@@ -166,6 +166,20 @@ public TbBook(Integer id, TbTheme idTheme, TbPlublishing idPublishing, String na
 	this.storageNumber = storageNumber;
 	this.languaage = languaage;
 }
+public TbBook( TbTheme idTheme, TbPlublishing idPublishing, String nameBook, TbAuthor idAuthor,
+		Integer publishingYear, Integer numberOfPages, String priceBook, Integer storageNumber, Integer languaage) {
+	super();
+	this.idTheme = idTheme;
+	this.idPublishing = idPublishing;
+	this.nameBook = nameBook;
+	this.idAuthor = idAuthor;
+	this.publishingYear = publishingYear;
+	this.numberOfPages = numberOfPages;
+	this.priceBook = priceBook;
+	this.storageNumber = storageNumber;
+	this.languaage = languaage;
+}
+
 
 	@Override
 	public boolean equals(Object obj)
