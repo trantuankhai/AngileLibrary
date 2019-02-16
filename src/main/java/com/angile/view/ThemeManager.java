@@ -11,11 +11,14 @@ import com.angile.Service.ThemeServicesImpl;
 import com.angile.model.TbTheme;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenuItem;
 
 /**
  *
@@ -44,8 +47,7 @@ public class ThemeManager extends javax.swing.JFrame {
 		btnBoqua.setEnabled(false);
 		btnSave.setEnabled(false);
 		btnDelete.setEnabled(false);
-
-	}
+}
 
 	void showDataIntoTableTheme() {
 		model = (DefaultTableModel) tblTheme.getModel();
@@ -208,6 +210,18 @@ public class ThemeManager extends javax.swing.JFrame {
 			}
 		});
 		jMenuItem3 = new javax.swing.JMenuItem();
+		jMenuItem3.addActionListener(/**
+		 * @author Tuan Khai
+		 *
+		 */
+		new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				AuthorManager authorManager = new AuthorManager();
+				ThemeManager  themeManager = new ThemeManager();
+				themeManager.setVisible(false);
+				themeManager.setVisible(true);
+			}
+		});
 		jMenuItem3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -239,7 +253,12 @@ public class ThemeManager extends javax.swing.JFrame {
 		btnExport.setText("Kiết Xuất");
 		btnExport.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButton7ActionPerformed(evt);
+				try {
+					jButton7ActionPerformed(evt);
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		});
 
@@ -268,7 +287,7 @@ public class ThemeManager extends javax.swing.JFrame {
 		});
 		jMenu1.add(jMenuItem1);
 
-		jMenuItem2.setText("Quản Lý Chủ Đề");
+		jMenuItem2.setText("Quản Lý Nhà Xuất Bản");
 		jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jMenuItem2ActionPerformed(evt);
@@ -283,6 +302,9 @@ public class ThemeManager extends javax.swing.JFrame {
 		jMenu1.add(jMenuItem4);
 
 		jMenuBar1.add(jMenu1);
+		
+		mntmNewMenuItem = new JMenuItem("Thống Kê");
+		jMenu1.add(mntmNewMenuItem);
 
 		jMenu2.setText("Đăng Xuất");
 		jMenuBar1.add(jMenu2);
@@ -377,8 +399,8 @@ public class ThemeManager extends javax.swing.JFrame {
 	private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem2ActionPerformed
 		// TODO add your handling code here:
 		this.setVisible(false);
-		ThemeManager themeManager = new ThemeManager();
-		themeManager.setVisible(true);
+		PublishingManager publishingManager = new PublishingManager();
+		publishingManager.setVisible(true);
 
 	}// GEN-LAST:event_jMenuItem2ActionPerformed
 
@@ -393,8 +415,9 @@ public class ThemeManager extends javax.swing.JFrame {
 		flag = 1;
 	}// GEN-LAST:event_jButton1ActionPerformed
 
-	private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton7ActionPerformed
+	private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) throws IOException {// GEN-FIRST:event_jButton7ActionPerformed
 		// TODO add your handling code here:
+		themeServicesImpl.exportExcel();
 	}// GEN-LAST:event_jButton7ActionPerformed
 
 	/**
@@ -465,5 +488,6 @@ public class ThemeManager extends javax.swing.JFrame {
 	private javax.swing.JTextField tfNameTheme;
 	private javax.swing.JTextField tfSearchTheme;
 	private JButton btnSearch;
+	private JMenuItem mntmNewMenuItem;
 	// End of variables declaration//GEN-END:variables
 }

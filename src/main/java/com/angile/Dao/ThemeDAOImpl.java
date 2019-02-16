@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.angile.model.TbTheme;
 
-public class ThemeDAOImpl implements ThemeDAO {
+public class ThemeDAOImpl implements ThemeDAO  {
 	private final static SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml")
 			.buildSessionFactory();
 
@@ -109,4 +109,26 @@ public class ThemeDAOImpl implements ThemeDAO {
 		return theme;
 	}
 
+	public  TbTheme searchTheme(String nameTheme) {
+		Session session = sessionFactory.openSession();
+		TbTheme  theme = null;
+		try {
+			session.getTransaction().begin();
+			Query query = session.createQuery("from TbTheme t where t.nameTheme like '%:nametheme%'");
+			query.setParameter("nametheme", nameTheme);
+			theme = (TbTheme)query.uniqueResult();
+			session.getTransaction().commit();
+			return theme;
+		} catch (Exception e) {
+			if(session.getTransaction()!=null)
+				session.getTransaction().rollback();
+				e.printStackTrace();
+		}finally {
+			session.close();
+		}
+		return theme;
+	}
+	
 }
+
+

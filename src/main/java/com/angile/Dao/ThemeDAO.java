@@ -10,6 +10,7 @@ public interface ThemeDAO {
 	public boolean removeTheme(int id_Theme);
 	public TbTheme showThemeById(int id_Theme);
 	public boolean editTheme(int id_Theme,String name_Theme);
+	public TbTheme searchTheme(String nameTheme);
 	
 	
 

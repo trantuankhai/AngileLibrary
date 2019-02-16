@@ -488,7 +488,7 @@ public class BookManager extends javax.swing.JFrame {
 		jMenu1.setText("Chức Năng");
 
 		jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_1, 0));
-		jMenuItem2.setText("Quản Lý Sách");
+		jMenuItem2.setText("Quản Lý Nhà Xuất Bản");
 		jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jMenuItem2ActionPerformed(evt);
@@ -508,6 +508,11 @@ public class BookManager extends javax.swing.JFrame {
 		jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, 0));
 		jMenuItem4.setText("Quản Lý Tác Giả");
 		jMenu1.add(jMenuItem4);
+		jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				jMenuItem4ActionPerformed(evt);
+			}
+		});
 
 		jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_4, 0));
 		jMenuItem5.setText("Quản Lý Độc Giả");
@@ -558,12 +563,21 @@ public class BookManager extends javax.swing.JFrame {
 
 	private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem2ActionPerformed
 		// TODO add your handling code here:
+		this.setVisible(false);
+		PublishingManager publishingManager = new PublishingManager();
+		publishingManager.setVisible(true);
 	}// GEN-LAST:event_jMenuItem2ActionPerformed
 
 	private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem3ActionPerformed
-		// TODO add your handling code here:
+		this.setVisible(false);
+		ThemeManager themeManager = new ThemeManager();
+		themeManager.setVisible(true);
 	}// GEN-LAST:event_jMenuItem3ActionPerformed
-
+	private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem3ActionPerformed
+		this.setVisible(false);
+		AuthorManager authorManager = new AuthorManager();
+		authorManager.setVisible(true);
+	}// GEN-LAST:event_jMenuItem3ActionPerformed
 	private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jCheckBox1ActionPerformed
 		// TODO add your handling code here:
 	}// GEN-LAST:event_jCheckBox1ActionPerformed
