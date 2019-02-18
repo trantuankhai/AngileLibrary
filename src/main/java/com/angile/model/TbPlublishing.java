@@ -17,8 +17,8 @@ import javax.persistence.Table;
 public class TbPlublishing implements java.io.Serializable
 {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE ,generator="SEQ_TB_PLUBLISHING")
-	@SequenceGenerator(name="SEQ_TB_PLUBLISHING",sequenceName="SEQ_TB_PLUBLISHING",allocationSize=1)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE ,generator="SEQ_PUBLISHING_HOUSE")
+	@SequenceGenerator(name="SEQ_PUBLISHING_HOUSE",sequenceName="SEQ_PUBLISHING_HOUSE",allocationSize=1)
 	@Column(name="ID_PUBLISHING",nullable=false)
 	private Integer id;
 	@Column(name="NAME_PUBLISHING")
@@ -109,6 +109,15 @@ public class TbPlublishing implements java.io.Serializable
 		result.append(namePublishing);
 		result.append("]");
 		return result.toString();
+	}
+
+	public TbPlublishing(String namePublishing, String phonePublishing, String addressPublishing,
+			String emailPublishing) {
+		super();
+		this.namePublishing = namePublishing;
+		this.phonePublishing = phonePublishing;
+		this.addressPublishing = addressPublishing;
+		this.emailPublishing = emailPublishing;
 	}
 
 	public TbPlublishing(Integer id, String namePublishing) {

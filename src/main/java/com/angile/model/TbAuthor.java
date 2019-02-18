@@ -89,6 +89,14 @@ public class TbAuthor implements java.io.Serializable
 		this.emailAuthor = emailAuthor;
 	}
 
+	public TbAuthor( String nameAuthor, String addressAuthor, String phoneAuthor, String emailAuthor) {
+		super();
+		this.nameAuthor = nameAuthor;
+		this.addressAuthor = addressAuthor;
+		this.phoneAuthor = phoneAuthor;
+		this.emailAuthor = emailAuthor;
+	}
+
 	@Override
 	public int hashCode()
 	{

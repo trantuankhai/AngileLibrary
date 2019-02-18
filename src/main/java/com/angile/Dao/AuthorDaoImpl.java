@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.angile.model.TbAuthor;
+
 public class AuthorDaoImpl implements AuthorDao {
 	private final SessionFactory sessionFactoty = new Configuration().configure("hibernate.cfg.xml")
 			.buildSessionFactory();
@@ -34,25 +35,74 @@ public class AuthorDaoImpl implements AuthorDao {
 
 	@Override
 	public boolean addAuthor(TbAuthor Author) {
-		// TODO Auto-generated method stub
-		return false;
+		Session session = sessionFactoty.openSession();
+		try {
+			session.getTransaction().begin();
+			session.save(Author);
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			return false;
+		} finally {
+			session.close();
+		}
 	}
 
 	@Override
-	public boolean editAuthor(int id_Author) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean editAuthor(int id_author,TbAuthor author) {
+		Session session = sessionFactoty.openSession();
+		try {
+			session.getTransaction().begin();
+			author.setId(id_author);
+			session.saveOrUpdate(author);
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			e.printStackTrace();
+			return false;
+		} finally {
+			session.close();
+		}
 	}
 
 	@Override
 	public boolean removeAuthor(int id_Author) {
-		// TODO Auto-generated method stub
-		return false;
+		Session session = sessionFactoty.openSession();
+		TbAuthor author = null;
+		try {
+			session.getTransaction().begin();
+			author =  session.get(TbAuthor.class, id_Author);
+			session.delete(author);
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			return false;
+		} finally {
+			session.close();
+		}
 	}
 
 	@Override
 	public TbAuthor getAuthorById(int id_Author) {
-		// TODO Auto-generated method stub
+		Session session = sessionFactoty.openSession();
+		TbAuthor author = null;
+		try {
+			session.getTransaction().begin();
+			author = session.get(TbAuthor.class, id_Author);
+			session.getTransaction().commit();
+			return author;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+		} finally {
+			session.close();
+		}
 		return null;
 	}
 
