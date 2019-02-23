@@ -105,4 +105,24 @@ public class PublishingDaoImpl implements PublishingDao {
 		}
 	}
 
+	@Override
+	public TbPlublishing getPublishingByName(String name) {
+		Session session = sessionFactoty.openSession();
+		TbPlublishing plublishing = null;
+		try {
+			session.getTransaction().begin();
+			plublishing = (TbPlublishing) session
+					.createQuery("from TbPlublishing where namePublishing = :namePublishing")
+					.setParameter("namePublishing", name).uniqueResult();
+			session.getTransaction().commit();
+			return plublishing;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			return null;
+		} finally {
+			session.close();
+		}
+	}
+
 }

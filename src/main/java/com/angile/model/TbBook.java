@@ -1,5 +1,6 @@
 package com.angile.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
@@ -23,15 +24,15 @@ public class TbBook implements java.io.Serializable
 	@SequenceGenerator(name = "SEQ_TB_BOOK", sequenceName = "SEQ_TB_BOOK", allocationSize = 1)
 	@Column(name="ID_BOOK")
 	private Integer id;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="ID_THEME")
 	private TbTheme idTheme;
-	@ManyToOne
-	@JoinColumn(name="ID_PUBLISHING")
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="ID_PUBLISHING") 
 	private TbPlublishing idPublishing;
 	@Column(name="NAME_BOOK")
 	private String nameBook;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="ID_AUTHOR")
 	private TbAuthor idAuthor;
 	@Column(name="PUBLISHING_YEAR")

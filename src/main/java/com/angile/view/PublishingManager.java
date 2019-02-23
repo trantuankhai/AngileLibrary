@@ -84,11 +84,11 @@ public class PublishingManager extends javax.swing.JFrame {
 		} else if (tfAddressPublishing.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "Bạn chưa nhập địa chỉ");
 			return false;
-		} else if (tfPhonePublishing.getText().equals("")) {
-			JOptionPane.showMessageDialog(null, "Bạn chưa nhập số điện thoại");
+		} else if (tfPhonePublishing.getText().equals("") || tfPhonePublishing.getText().matches("0[0-9s.-]{9,10}")==false) {
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập số điện thoại hoặc không đúng định dạng");
 			return false;
-		} else if (tfEmailPublishing.getText().equals("")) {
-			JOptionPane.showMessageDialog(null, "Bạn chưa nhập email");
+		} else if (tfEmailPublishing.getText().equals("")|| tfEmailPublishing.getText().matches("[a-zA-Z0-9_\\.]+@[a-zA-Z]+\\.[a-zA-Z]+(\\.[a-zA-Z]+)*") == false) {
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập email hoặc không đúng định dạng");
 			return false;
 		} else {
 			return true;
@@ -125,6 +125,21 @@ public class PublishingManager extends javax.swing.JFrame {
 			JOptionPane.showMessageDialog(null, "Lỗi trong quá trình xóa");
 		}
 	}
+	void searchPlByName(String name)
+	{
+		TbPlublishing plublishing = publishingServicesimpl.getPublishingByName(name);
+		if(plublishing!=null)
+		{
+			tfCodePublishing.setText(plublishing.getId() + "");
+			tfNamePublishing.setText(plublishing.getNamePublishing());
+			tfPhonePublishing.setText(plublishing.getPhonePublishing());
+			tfAddressPublishing.setText(plublishing.getAddressPublishing());
+			tfEmailPublishing.setText(plublishing.getEmailPublishing());
+		}else
+		{
+			JOptionPane.showMessageDialog(null, "Không tìm thấy");
+		}
+	}
 
 	/**
 	 * This method is called from within the constructor to initialize the form.
@@ -153,6 +168,17 @@ public class PublishingManager extends javax.swing.JFrame {
 		jLabel7 = new javax.swing.JLabel();
 		tfSearchPublishing = new javax.swing.JTextField();
 		btnSearch = new javax.swing.JButton();
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(tfSearchPublishing.getText().equals(""))
+				{
+					JOptionPane.showMessageDialog(null, "Bạn chưa nhập từ khóa");
+				}else
+				{
+					searchPlByName(tfSearchPublishing.getText());
+				}
+			}
+		});
 		btnExcel = new javax.swing.JButton();
 		btnExcel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -247,8 +273,13 @@ public class PublishingManager extends javax.swing.JFrame {
 		jMenuItem1 = new javax.swing.JMenuItem();
 		jMenuItem2 = new javax.swing.JMenuItem();
 		jMenuItem3 = new javax.swing.JMenuItem();
-		jMenuItem4 = new javax.swing.JMenuItem();
 		jMenu4 = new javax.swing.JMenu();
+		jMenu4.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				logOut(arg0);
+			}
+		});
 
 		jMenu1.setText("File");
 		jMenuBar1.add(jMenu1);
@@ -330,9 +361,6 @@ public class PublishingManager extends javax.swing.JFrame {
 			}
 		});
 		jMenu3.add(jMenuItem3);
-
-		jMenuItem4.setText("Thống Kê");
-		jMenu3.add(jMenuItem4);
 
 		jMenuBar2.add(jMenu3);
 
@@ -507,6 +535,11 @@ public class PublishingManager extends javax.swing.JFrame {
 		AuthorManager authorManager = new AuthorManager();
 		authorManager.setVisible(true);
 	}// GEN-LAST:event_jMenuItem3ActionPerformed
+	private void logOut( java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jMenuItem3ActionPerformed
+		this.setVisible(false);
+		LoginJframe loginJframe = new LoginJframe();
+		loginJframe.setVisible(true);
+	}// GEN-LAST:event_jMenuItem3ActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -574,7 +607,6 @@ public class PublishingManager extends javax.swing.JFrame {
 	private javax.swing.JMenuItem jMenuItem1;
 	private javax.swing.JMenuItem jMenuItem2;
 	private javax.swing.JMenuItem jMenuItem3;
-	private javax.swing.JMenuItem jMenuItem4;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JTable tblPublishing;
 	private javax.swing.JTextField tfAddressPublishing;

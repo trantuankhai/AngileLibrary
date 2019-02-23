@@ -87,29 +87,28 @@ public class AuthorManager extends javax.swing.JFrame {
 			JOptionPane.showMessageDialog(null, "Lỗi trong quá trình xóa");
 		}
 	}
-	boolean validateForm() 
-	{
+
+	boolean validateForm() {
 		if (tfNameAuthor.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "Bạn chưa nhập tên");
 			return false;
-		} else if (tfPhoneAuthor.getText().equals("")) {
-			JOptionPane.showMessageDialog(null, "Bạn chưa nhập số điện thoại");
+		} else if (tfPhoneAuthor.getText().equals("") || tfPhoneAuthor.getText().matches("0[0-9s.-]{9,10}") == false) {
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập số điện thoại hoặc không đúng định dạng");
 			return false;
-		} else if (tfEmailAuthor.getText().equals("")) {
-			JOptionPane.showMessageDialog(null, "Bạn chưa nhập email");
+		} else if (tfEmailAuthor.getText().equals("")
+				|| tfEmailAuthor.getText().matches("[a-zA-Z0-9_\\.]+@[a-zA-Z]+\\.[a-zA-Z]+(\\.[a-zA-Z]+)*") == false) {
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập email hoặc không đúng định dạng");
 			return false;
 		} else if (tfAddressAuthor.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "Bạn chưa nhập địa chỉ");
 			return false;
-		}else
-		{
+		} else {
 			return true;
 		}
 	}
 
 	void addAuthor(TbAuthor author) {
-		if(validateForm() == true)
-		{
+		if (validateForm() == true) {
 			if (auhorServicesImpl.addAuthor(author) == true) {
 				JOptionPane.showMessageDialog(null, "Thêm tác giả thành công");
 				showDataTableAuthor();
@@ -117,32 +116,44 @@ public class AuthorManager extends javax.swing.JFrame {
 			} else {
 				JOptionPane.showMessageDialog(null, "Lỗi trong quá trình thêm");
 			}
-		}else
-		{
+		} else {
 			// To Do Code
 		}
 	}
 
-	TbAuthor getAuthorFromForm() 
-	{
-		TbAuthor tbAuthor = new TbAuthor(tfNameAuthor.getText(), tfEmailAuthor.getText(), tfPhoneAuthor.getText(),
+	TbAuthor getAuthorFromForm() {
+		TbAuthor tbAuthor = new TbAuthor(tfNameAuthor.getText(), tfAddressAuthor.getText(), tfPhoneAuthor.getText(),
 				tfEmailAuthor.getText());
 
 		return tbAuthor;
 	}
-	void updateAuthor(TbAuthor author)
-	{
-		if(validateForm() == true)
-		{
-			if(auhorServicesImpl.editAuthor((int)tblAuthor.getValueAt(tblAuthor.getSelectedRow(), 0), author)==true)
-			{
-				JOptionPane.showMessageDialog(null,"Cập nhập tác giả thành công");
+
+	void updateAuthor(TbAuthor author) {
+		if (validateForm() == true) {
+			if (auhorServicesImpl.editAuthor((int) tblAuthor.getValueAt(tblAuthor.getSelectedRow(), 0),
+					author) == true) {
+				JOptionPane.showMessageDialog(null, "Cập nhập tác giả thành công");
 				showDataTableAuthor();
 				initFrame();
-			}else
-			{
+			} else {
 				JOptionPane.showMessageDialog(null, "Lỗi trong quá trình cập nhập");
 			}
+		}
+	}
+	void searchAuthorByName(String name)
+	
+	{
+		TbAuthor author = auhorServicesImpl.getAuthorByName(name);
+		if(author ==null)
+		{
+			JOptionPane.showMessageDialog(null,"Không tìm thấy kết quả phù hợp");
+		}else
+		{
+			tfCodeAuthor.setText(author.getId() + "");
+			tfNameAuthor.setText(author.getNameAuthor());
+			tfAddressAuthor.setText(author.getAddressAuthor());
+			tfEmailAuthor.setText(author.getEmailAuthor());
+			tfPhoneAuthor.setText(author.getPhoneAuthor());
 		}
 	}
 
@@ -173,6 +184,17 @@ public class AuthorManager extends javax.swing.JFrame {
 		tfEmailAuthor = new javax.swing.JTextField();
 		jTextField6 = new javax.swing.JTextField();
 		jButton1 = new javax.swing.JButton();
+		jButton1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(jTextField6.getText().equals(""))
+				{
+					JOptionPane.showMessageDialog(null,"Bạn chưa nhập từ khóa");
+				}else
+				{
+					searchAuthorByName(jTextField6.getText().trim());
+				}
+			}
+		});
 		btnEdit = new javax.swing.JButton();
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -185,17 +207,14 @@ public class AuthorManager extends javax.swing.JFrame {
 		btnExport = new javax.swing.JButton();
 		btnExport.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(JOptionPane.showConfirmDialog(null, "Bạn có muốn xuất báo cáo")==0)
-				{
-					if(auhorServicesImpl.exportExcel()==true)
-					{
+				if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xuất báo cáo") == 0) {
+					if (auhorServicesImpl.exportExcel() == true) {
 						System.out.println("Xuất thành công");
-					}else
-					{
+					} else {
 						System.out.println("Lỗi trong quá trình xuất file");
 					}
 				}
-		
+
 			}
 		});
 		btnBoqua = new javax.swing.JButton();
@@ -237,11 +256,9 @@ public class AuthorManager extends javax.swing.JFrame {
 		btnSave = new javax.swing.JButton();
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(flag ==1)
-				{
+				if (flag == 1) {
 					addAuthor(getAuthorFromForm());
-				}else if(flag == 2 )
-				{
+				} else if (flag == 2) {
 					updateAuthor(getAuthorFromForm());
 				}
 			}
@@ -265,8 +282,13 @@ public class AuthorManager extends javax.swing.JFrame {
 		jMenuItem1 = new javax.swing.JMenuItem();
 		jMenuItem2 = new javax.swing.JMenuItem();
 		jMenuItem3 = new javax.swing.JMenuItem();
-		jMenuItem4 = new javax.swing.JMenuItem();
 		jMenu2 = new javax.swing.JMenu();
+		jMenu2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				logOut(arg0);
+			}
+		});
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		setTitle("Quản Lý Tác Giả");
@@ -328,13 +350,10 @@ public class AuthorManager extends javax.swing.JFrame {
 		jMenuItem3.setText("Quản Lý Chủ Đề");
 		jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jMenuItem3ActionPerformed(evt);
+				actionPerformed(evt);
 			}
 		});
 		jMenu1.add(jMenuItem3);
-
-		jMenuItem4.setText("Thống Kê");
-		jMenu1.add(jMenuItem4);
 
 		jMenuBar1.add(jMenu1);
 
@@ -443,12 +462,11 @@ public class AuthorManager extends javax.swing.JFrame {
 		publishingManager.setVisible(true);
 	}// GEN-LAST:event_jMenuItem2ActionPerformed
 
-	private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem3ActionPerformed
-		// TODO add your handling code here:
+	private void logOut(java.awt.event.MouseEvent event) {// GEN-FIRST:event_jMenuItem2ActionPerformed
 		this.setVisible(false);
-		ThemeManager themeManager = new ThemeManager();
-		themeManager.setVisible(true);
-	}// GEN-LAST:event_jMenuItem3ActionPerformed
+		LoginJframe loginJframe = new LoginJframe();
+		loginJframe.setVisible(true);
+	}// GEN-LAST:event_jMenuItem2ActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -513,7 +531,6 @@ public class AuthorManager extends javax.swing.JFrame {
 	private javax.swing.JMenuItem jMenuItem1;
 	private javax.swing.JMenuItem jMenuItem2;
 	private javax.swing.JMenuItem jMenuItem3;
-	private javax.swing.JMenuItem jMenuItem4;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JTextField jTextField6;
 	private javax.swing.JTable tblAuthor;

@@ -11,4 +11,5 @@ public interface AuthorDao {
 	public boolean editAuthor(int id_author,TbAuthor author);
 	public boolean removeAuthor(int id_Author);
 	public TbAuthor getAuthorById(int id_Author);
+	public TbAuthor getAuthorByName(String name);
 }

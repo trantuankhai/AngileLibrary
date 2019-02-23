@@ -117,4 +117,13 @@ public class AuhorServicesImpl implements AuthorServices {
 		return style;
 	}
 
+	@Override
+	public TbAuthor getAuthorByName(String name) {
+		if(!name.equals(""))
+		{
+			return  AuhorDAO.getAuthorByName(name);
+		}
+		return null;
+	}
+
 }

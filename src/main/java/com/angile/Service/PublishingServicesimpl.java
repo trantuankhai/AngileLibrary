@@ -30,6 +30,7 @@ public class PublishingServicesimpl implements PublishingServices {
 		// TODO Auto-generated method stub
 		return PublishingServicesimpl.addPublishing(Publishing);
 	}
+
 	@Override
 	public boolean removePublishing(int id_Publishing) {
 		// TODO Auto-generated method stub
@@ -116,6 +117,13 @@ public class PublishingServicesimpl implements PublishingServices {
 		style.setFont(font);
 		return style;
 	}
+
+	@Override
+	public TbPlublishing getPublishingByName(String name) {
+		if (!name.equals("")) {
+			return PublishingServicesimpl.getPublishingByName(name);
+		} else {
+			return null;
+		}
 	}
-
-
+}

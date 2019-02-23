@@ -10,5 +10,7 @@ public interface BookServices {
 	public boolean editBook(int id_book);
 	public boolean removeBook(int id_book);
 	public TbBook getBookById(int id_book);
+	public boolean exportExcel();
+	public List<TbBook> showBookByIdThem(int id);
 
 }

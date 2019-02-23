@@ -10,4 +10,5 @@ public interface PublishingDao {
 	public boolean editPublishing(int id_Publishing,TbPlublishing plublishing);
 	public boolean removePublishing(int id_Publishing);
 	public TbPlublishing getPublishingById(int id_Publishing);
+	public TbPlublishing getPublishingByName(String name);
 }

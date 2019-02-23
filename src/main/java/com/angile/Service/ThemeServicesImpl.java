@@ -68,8 +68,11 @@ public class ThemeServicesImpl implements ThemeServices {
 
 	@Override
 	public TbTheme searchTheme(String nameTheme) {
-		// TODO Auto-generated method stub
-		return null;
+		if (!nameTheme.equals("")) {
+			return themeDAo.searchTheme(nameTheme);
+		} else {
+			return null;
+		}
 	}
 
 	@Override
@@ -96,7 +99,7 @@ public class ThemeServicesImpl implements ThemeServices {
 			for (TbTheme emp : list) {
 				rownum++;
 				row = sheet.createRow(rownum);
-				cell = row.createCell(0,org.apache.poi.ss.usermodel.CellType.STRING);
+				cell = row.createCell(0, org.apache.poi.ss.usermodel.CellType.STRING);
 				cell.setCellValue(emp.getId());
 				cell = row.createCell(1, org.apache.poi.ss.usermodel.CellType.STRING);
 				cell.setCellValue(emp.getNameTheme());
@@ -107,7 +110,7 @@ public class ThemeServicesImpl implements ThemeServices {
 			FileOutputStream outFile = new FileOutputStream(file);
 			workbook.write(outFile);
 			System.out.println("Created file: " + file.getAbsolutePath());
-			if(Desktop.isDesktopSupported()&& new File(file.getAbsolutePath()).exists()) {
+			if (Desktop.isDesktopSupported() && new File(file.getAbsolutePath()).exists()) {
 				Desktop.getDesktop().open(new File(file.getAbsolutePath()));
 			}
 		}
@@ -115,11 +118,11 @@ public class ThemeServicesImpl implements ThemeServices {
 	}
 
 	private HSSFCellStyle createStyleForTitle(HSSFWorkbook workbook) {
-        HSSFFont font = workbook.createFont();
-        font.setBold(true);
-        HSSFCellStyle style = workbook.createCellStyle();
-        style.setFont(font);
-        return style;
+		HSSFFont font = workbook.createFont();
+		font.setBold(true);
+		HSSFCellStyle style = workbook.createCellStyle();
+		style.setFont(font);
+		return style;
 	}
 
 }

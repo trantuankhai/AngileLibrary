@@ -114,19 +114,18 @@ public class ThemeDAOImpl implements ThemeDAO  {
 		TbTheme  theme = null;
 		try {
 			session.getTransaction().begin();
-			Query query = session.createQuery("from TbTheme t where t.nameTheme like '%:nametheme%'");
-			query.setParameter("nametheme", nameTheme);
-			theme = (TbTheme)query.uniqueResult();
+			theme = (TbTheme)session.createQuery("from TbTheme t where t.nameTheme =:nametheme").setParameter("nametheme", nameTheme).uniqueResult();
 			session.getTransaction().commit();
 			return theme;
 		} catch (Exception e) {
 			if(session.getTransaction()!=null)
 				session.getTransaction().rollback();
 				e.printStackTrace();
+				return null;
 		}finally {
 			session.close();
 		}
-		return theme;
+
 	}
 	
 }

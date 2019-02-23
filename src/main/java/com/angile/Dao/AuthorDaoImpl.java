@@ -106,4 +106,22 @@ public class AuthorDaoImpl implements AuthorDao {
 		return null;
 	}
 
+	@Override
+	public TbAuthor getAuthorByName(String name) {
+		Session session = sessionFactoty.openSession();
+		TbAuthor author = null;
+		try {
+			session.getTransaction().begin();
+			author =(TbAuthor) session.createQuery(" from TbAuthor where nameAuthor = :nameAuthor").setParameter("nameAuthor", name).uniqueResult();
+			session.getTransaction().commit();
+			return author;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+		} finally {
+			session.close();
+		}
+		return null;
+	}
+
 }

@@ -11,5 +11,6 @@ public interface AuthorServices {
 	public boolean removeAuthor(int id_Author);
 	public TbAuthor getAuthorById(int id_Author);
 	public boolean exportExcel();
+	public TbAuthor getAuthorByName(String name);
 
 }

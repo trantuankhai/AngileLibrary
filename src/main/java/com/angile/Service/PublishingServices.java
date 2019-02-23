@@ -11,5 +11,6 @@ public interface PublishingServices {
 	public boolean removePublishing(int id_Publishing);
 	public TbPlublishing getPublishingById(int id_Publishing);
 	public boolean exportExcel();
+	public TbPlublishing getPublishingByName(String name);
 
 }

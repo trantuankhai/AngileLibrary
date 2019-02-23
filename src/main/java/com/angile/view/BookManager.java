@@ -26,6 +26,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
@@ -66,7 +67,7 @@ public class BookManager extends javax.swing.JFrame {
 	void swith_Enabled(boolean dieukien) {
 		cboPublicshing.setEnabled(dieukien);
 		cboTheme.setEnabled(dieukien);
-		tfCode.setEnabled(dieukien);
+		tfCode.setEnabled(false);
 		tfTitle.setEnabled(dieukien);
 		tfCount.setEnabled(dieukien);
 		tfPrice.setEnabled(dieukien);
@@ -77,13 +78,33 @@ public class BookManager extends javax.swing.JFrame {
 		rdoVn.setEnabled(dieukien);
 		rdoKhac.setEnabled(dieukien);
 	}
+	int convertLanguage() {
+		if(rdoVn.isSelected())
+		{
+			return 1;
+		}else if(rdoEn.isSelected())
+		{
+			return 2;
+		}else
+		{
+			return 0;
+		}
+	}
+	TbBook getBookFromForm()
+	{
+		TbBook book = new TbBook(themeServicesImpl.searchTheme((String)cboTheme.getSelectedItem()), publishingServicesimpl.getPublishingByName((String)cboPublicshing.getSelectedItem()), tfTitle.getText(), auhorServicesImpl.getAuthorByName((String)cboAuthor.getSelectedItem()), Integer.parseInt(tfYear.getText()), Integer.parseInt(tfPage.getText()),tfPrice.getText(),Integer.parseInt(tfCount.getText()), convertLanguage());
+		return book;
+	}
 
 	void showDataTableBook() {
 
 		tableModel = (DefaultTableModel) tblBook.getModel();
 		tableModel.setRowCount(0);
-		for (TbBook x : bookServicesImpl.getBook(0, 5)) {
-			tableModel.addRow(new Object[] { x.getId(), x.getNameBook(), x.getNumberOfPages() });
+		if (bookServicesImpl.getBook(0, 100) != null) {
+			for (TbBook x : bookServicesImpl.getBook(0, 100)) {
+				tableModel.addRow(new Object[] { x.getId(), x.getNameBook(), x.getNumberOfPages() });
+			}
+
 		}
 
 	}
@@ -146,36 +167,37 @@ public class BookManager extends javax.swing.JFrame {
 		tfYear.setText(null);
 	}
 
-	String addBook() {
-		Calendar calendar = Calendar.getInstance();
-		calendar.setTime(new Date());
-		String resutl = null;
+	boolean validateBook() {
 		if (tfTitle.getText().equals("")) {
-			resutl = "Bạn chưa nhập tiêu đề sách";
-		}else if(tfYear.getText().equals("")) {
-			resutl = "Bạn chưa nhập năm xuất bản";
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập tiêu đề sách");
+			return false;
+		} else if (tfYear.getText().equals("") || tfYear.getText().matches("^[0-3]+$")==false) {
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập năm xuất bản hoặc không đúng định dạng");
+				return false;
+		} else if (tfPage.getText().equals("") || tfYear.getText().matches("^[0-9]+$")==false) {
+			JOptionPane.showMessageDialog(null,"Bạn chưa nhập số trang hoặc không đúng định dạng");
+			return false;
+		} else if (tfPrice.getText().equals("")|| tfYear.getText().matches("^[0-9]+$")==false) {
+			JOptionPane.showMessageDialog(null, "Bạn chưa nhập giá hoặc không đúng định dạng");
+			return false;
+
+		} else if (tfCount.getText().equals("")|| tfYear.getText().matches("^[0-9]+$")==false) {
+			JOptionPane.showMessageDialog(null,"Bạn chưa nhập số bản lưu hoặc không đúng định dạng");
+			return false;
+		}else {
+			return true;
 		}
-		else if(tfPage.getText().equals("")) {
-			resutl = "Bạn chưa nhập số trang";
-		}else if(tfPrice.getText().equals("")) {
-			resutl = "Bạn chưa nhập giá";
-			
-		}else if(tfCount.getText().equals("")) {
-			resutl = "Bạn chưa nhập số bản lưu";
+	}
+
+	void addBook(TbBook book) {
+		if(bookServicesImpl.addBook(book)==true)
+		{
+			showDataTableBook();
+			clearForm();
+		}else
+		{
+			JOptionPane.showMessageDialog(null,"Thêm sách không thành công");
 		}
-//		else if(tfYear.getText().matches("")) {
-//			resutl = "Năm phải là số";
-//		}else if(Integer.parseInt(tfYear.getText())>calendar.get(Calendar.YEAR)) {
-//			resutl="Năm xuất bản phải nhỏ hơn hoặc bằng năm hiện tại";
-//		}
-		else {
-//			if(bookServicesImpl.addBook(new TbBook(cboTheme.getSelectedIndex(), cboPublicshing.getSelectedIndex(), tfTitle.getText(), cboAuthor.getSelectedIndex(), tfYear.getText(), tfPage.getText(), tfPrice.getText(), tfCount.getText(),1)){
-//				resutl = "Thêm sách thành công";
-//			}
-			
-		}
-			
-		return resutl;
 	}
 
 	/**
@@ -193,7 +215,34 @@ public class BookManager extends javax.swing.JFrame {
 		pnLeft = new javax.swing.JPanel();
 		jScrollPane1 = new javax.swing.JScrollPane();
 		tblTheme = new javax.swing.JTable();
+		tblTheme.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+			List<TbBook> books=	 bookServicesImpl.showBookByIdThem((Integer) tblTheme.getValueAt(tblTheme.getSelectedRow(),0));
+
+			tableModel = (DefaultTableModel) tblBook.getModel();
+			tableModel.setRowCount(0);
+		
+				for (TbBook x :books) {
+					tableModel.addRow(new Object[] { x.getId(), x.getNameBook(), x.getNumberOfPages() });
+				}
+
+			
+			}
+		});
 		jCheckBox1 = new javax.swing.JCheckBox();
+		jCheckBox1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				if(jCheckBox1.isSelected()==true)
+				{
+					System.out.println("1");
+				}else
+				{
+					System.out.println("2");
+				}
+			}
+		});
 		jPanel1 = new javax.swing.JPanel();
 		btnAdd = new javax.swing.JButton();
 		btnEdit = new javax.swing.JButton();
@@ -209,8 +258,11 @@ public class BookManager extends javax.swing.JFrame {
 		btnSave = new javax.swing.JButton();
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(flag==2) {
-					JOptionPane.showMessageDialog(null,addBook());
+				if (flag == 2) {
+					if(validateBook()==true)
+					{
+						addBook(getBookFromForm());
+					}
 				}
 			}
 		});
@@ -220,6 +272,7 @@ public class BookManager extends javax.swing.JFrame {
 				btnIrmoge.setEnabled(false);
 				btnSave.setEnabled(false);
 				btnEdit.setEnabled(false);
+				btnDelete.setEnabled(false);
 				if (flag == 2) {
 					swith_Enabled(false);
 				} else if (flag == 3) {
@@ -228,6 +281,11 @@ public class BookManager extends javax.swing.JFrame {
 			}
 		});
 		btnExport = new javax.swing.JButton();
+		btnExport.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				bookServicesImpl.exportExcel();
+			}
+		});
 		jLabel2 = new javax.swing.JLabel();
 		cboTheme = new javax.swing.JComboBox();
 		jLabel3 = new javax.swing.JLabel();
@@ -384,124 +442,106 @@ public class BookManager extends javax.swing.JFrame {
 		jScrollPane2.setViewportView(tblBook);
 
 		javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-		jPanel1Layout.setHorizontalGroup(
-			jPanel1Layout.createParallelGroup(Alignment.LEADING)
-				.addGroup(Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-						.addGroup(Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-							.addGap(35)
-							.addComponent(jScrollPane2, GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE))
-						.addGroup(jPanel1Layout.createSequentialGroup()
-							.addGap(25)
-							.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING).addGroup(
+				Alignment.TRAILING,
+				jPanel1Layout.createSequentialGroup().addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+						.addGroup(Alignment.LEADING,
+								jPanel1Layout.createSequentialGroup().addGap(35).addComponent(jScrollPane2,
+										GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE))
+						.addGroup(jPanel1Layout.createSequentialGroup().addGap(25).addGroup(jPanel1Layout
+								.createParallelGroup(Alignment.TRAILING)
 								.addGroup(jPanel1Layout.createSequentialGroup()
-									.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-										.addGroup(jPanel1Layout.createSequentialGroup()
-											.addComponent(btnAdd, GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
-											.addGap(16))
-										.addComponent(jLabel2)
-										.addComponent(jLabel6)
-										.addComponent(jLabel7)
-										.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
-											.addComponent(jLabel5)
-											.addComponent(jLabel3)))
-									.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-										.addGroup(jPanel1Layout.createSequentialGroup()
-											.addComponent(tfYear, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-											.addGap(18)
-											.addComponent(jLabel8)
-											.addGap(34)
-											.addComponent(tfPage, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE))
-										.addGroup(jPanel1Layout.createSequentialGroup()
-											.addComponent(btnEdit, GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-											.addGap(24)
-											.addComponent(btnDelete, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-											.addGap(24)
-											.addComponent(btnSave, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-											.addGap(18)
-											.addComponent(btnIrmoge, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addComponent(btnExport, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-											.addGap(40))
-										.addComponent(tfTitle, 437, 437, Short.MAX_VALUE)
-										.addGroup(jPanel1Layout.createSequentialGroup()
-											.addComponent(tfCode, GroupLayout.PREFERRED_SIZE, 121, GroupLayout.PREFERRED_SIZE)
-											.addGap(34)
-											.addComponent(jLabel4)
-											.addGap(18)
-											.addComponent(cboPublicshing, 0, 187, Short.MAX_VALUE))
-										.addComponent(cboTheme, 0, 437, Short.MAX_VALUE)
-										.addComponent(cboAuthor, 0, 437, Short.MAX_VALUE)))
-								.addGroup(jPanel1Layout.createSequentialGroup()
-									.addComponent(jLabel10)
-									.addGap(18)
-									.addComponent(tfCount, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-									.addGap(18)
-									.addComponent(jLabel11)
-									.addGap(18)
-									.addComponent(rdoEn)
-									.addGap(18)
-									.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
-										.addGroup(jPanel1Layout.createSequentialGroup()
-											.addComponent(rdoVn)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(rdoKhac))
-										.addGroup(jPanel1Layout.createSequentialGroup()
-											.addGap(18)
-											.addComponent(jLabel9)
-											.addGap(18)
-											.addComponent(tfPrice, GroupLayout.PREFERRED_SIZE, 104, GroupLayout.PREFERRED_SIZE)))))))
-					.addGap(20))
-		);
-		jPanel1Layout.setVerticalGroup(
-			jPanel1Layout.createParallelGroup(Alignment.LEADING)
-				.addGroup(jPanel1Layout.createSequentialGroup()
-					.addGap(12)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(btnAdd)
-						.addComponent(btnEdit)
-						.addComponent(btnDelete)
-						.addComponent(btnSave)
-						.addComponent(btnIrmoge)
-						.addComponent(btnExport))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(jLabel2)
-						.addComponent(cboTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(jLabel3)
-						.addComponent(tfCode, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(jLabel4)
-						.addComponent(cboPublicshing, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(tfTitle, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+										.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+												.addGroup(jPanel1Layout.createSequentialGroup()
+														.addComponent(btnAdd, GroupLayout.DEFAULT_SIZE, 74,
+																Short.MAX_VALUE)
+														.addGap(16))
+												.addComponent(jLabel2).addComponent(jLabel6).addComponent(jLabel7)
+												.addGroup(jPanel1Layout.createParallelGroup(Alignment.TRAILING)
+														.addComponent(jLabel5).addComponent(jLabel3)))
+										.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+												.addGroup(jPanel1Layout.createSequentialGroup()
+														.addComponent(tfYear, GroupLayout.PREFERRED_SIZE, 94,
+																GroupLayout.PREFERRED_SIZE)
+														.addGap(18).addComponent(jLabel8).addGap(34)
+														.addComponent(tfPage, GroupLayout.PREFERRED_SIZE, 77,
+																GroupLayout.PREFERRED_SIZE))
+												.addGroup(
+														jPanel1Layout.createSequentialGroup()
+																.addComponent(btnEdit, GroupLayout.DEFAULT_SIZE, 57,
+																		Short.MAX_VALUE)
+																.addGap(24)
+																.addComponent(btnDelete, GroupLayout.DEFAULT_SIZE,
+																		GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+																.addGap(24)
+																.addComponent(btnSave, GroupLayout.DEFAULT_SIZE,
+																		GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+																.addGap(18)
+																.addComponent(btnIrmoge, GroupLayout.DEFAULT_SIZE,
+																		GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+																.addPreferredGap(ComponentPlacement.UNRELATED)
+																.addComponent(btnExport, GroupLayout.DEFAULT_SIZE,
+																		GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+																.addGap(40))
+												.addComponent(tfTitle, 437, 437, Short.MAX_VALUE)
+												.addGroup(jPanel1Layout.createSequentialGroup()
+														.addComponent(tfCode, GroupLayout.PREFERRED_SIZE, 121,
+																GroupLayout.PREFERRED_SIZE)
+														.addGap(34).addComponent(jLabel4).addGap(18)
+														.addComponent(cboPublicshing, 0, 187, Short.MAX_VALUE))
+												.addComponent(cboTheme, 0, 437, Short.MAX_VALUE)
+												.addComponent(cboAuthor, 0, 437, Short.MAX_VALUE)))
+								.addGroup(jPanel1Layout.createSequentialGroup().addComponent(jLabel10).addGap(18)
+										.addComponent(tfCount, GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE).addGap(18)
+										.addComponent(jLabel11).addGap(18).addComponent(rdoEn).addGap(18)
+										.addGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING)
+												.addGroup(jPanel1Layout.createSequentialGroup().addComponent(rdoVn)
+														.addPreferredGap(ComponentPlacement.RELATED)
+														.addComponent(rdoKhac))
+												.addGroup(jPanel1Layout.createSequentialGroup().addGap(18)
+														.addComponent(jLabel9).addGap(18).addComponent(tfPrice,
+																GroupLayout.PREFERRED_SIZE, 104,
+																GroupLayout.PREFERRED_SIZE)))))))
+						.addGap(20)));
+		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel1Layout
+				.createSequentialGroup().addGap(12)
+				.addGroup(jPanel1Layout
+						.createParallelGroup(Alignment.BASELINE).addComponent(btnAdd).addComponent(btnEdit)
+						.addComponent(btnDelete).addComponent(btnSave).addComponent(btnIrmoge).addComponent(btnExport))
+				.addPreferredGap(ComponentPlacement.UNRELATED)
+				.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE).addComponent(jLabel2).addComponent(
+						cboTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addGap(18)
+				.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE).addComponent(jLabel3)
+						.addComponent(tfCode, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabel4).addComponent(cboPublicshing, GroupLayout.PREFERRED_SIZE,
+								GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addGap(18)
+				.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(tfTitle, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
 						.addComponent(jLabel5))
-					.addGap(18)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(jLabel6)
-						.addComponent(cboAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(24)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(jLabel7)
-						.addComponent(tfYear, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+				.addGap(18)
+				.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE).addComponent(jLabel6).addComponent(
+						cboAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addGap(24)
+				.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE).addComponent(jLabel7)
+						.addComponent(tfYear, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
 						.addComponent(jLabel8)
-						.addComponent(tfPage, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(jLabel9)
-						.addComponent(tfPrice, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(jLabel10)
-						.addComponent(tfCount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(jLabel11)
-						.addComponent(rdoEn)
-						.addComponent(rdoVn)
-						.addComponent(rdoKhac))
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, 172, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(15, Short.MAX_VALUE))
-		);
+						.addComponent(tfPage, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabel9).addComponent(tfPrice, GroupLayout.PREFERRED_SIZE,
+								GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+				.addGap(18)
+				.addGroup(jPanel1Layout.createParallelGroup(Alignment.BASELINE).addComponent(jLabel10)
+						.addComponent(tfCount, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabel11).addComponent(rdoEn).addComponent(rdoVn).addComponent(rdoKhac))
+				.addPreferredGap(ComponentPlacement.RELATED)
+				.addComponent(jScrollPane2, GroupLayout.PREFERRED_SIZE, 172, GroupLayout.PREFERRED_SIZE)
+				.addContainerGap(15, Short.MAX_VALUE)));
 		jPanel1.setLayout(jPanel1Layout);
 
 		jMenu1.setText("Chức Năng");
@@ -592,11 +632,13 @@ public class BookManager extends javax.swing.JFrame {
 		ThemeManager themeManager = new ThemeManager();
 		themeManager.setVisible(true);
 	}// GEN-LAST:event_jMenuItem3ActionPerformed
+
 	private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jMenuItem3ActionPerformed
 		this.setVisible(false);
 		AuthorManager authorManager = new AuthorManager();
 		authorManager.setVisible(true);
 	}// GEN-LAST:event_jMenuItem3ActionPerformed
+
 	private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jCheckBox1ActionPerformed
 		// TODO add your handling code here:
 	}// GEN-LAST:event_jCheckBox1ActionPerformed
