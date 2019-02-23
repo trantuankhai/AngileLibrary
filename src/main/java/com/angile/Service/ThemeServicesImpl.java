@@ -29,12 +29,8 @@ public class ThemeServicesImpl implements ThemeServices {
 
 	@Override
 	public boolean addTheme(String name_Theme) {
-		if (!name_Theme.equals("")) {
-			if (themeDAo.addTheme(name_Theme)) {
-				return true;
-			} else {
-				return false;
-			}
+		if (name_Theme!=null) {
+			return themeDAo.addTheme(name_Theme);
 
 		} else {
 			return false;

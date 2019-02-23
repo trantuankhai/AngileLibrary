@@ -3,6 +3,7 @@ package com.angile.Service;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.lang.annotation.Retention;
 import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
@@ -27,7 +28,23 @@ public class AuhorServicesImpl implements AuthorServices {
 
 	@Override
 	public boolean addAuthor(TbAuthor Author) {
-		return AuhorDAO.addAuthor(Author);
+		if (Author.getNameAuthor()!=null) {
+			return false;
+		} else if (Author.getPhoneAuthor()!=null) {
+			return false;
+		} else if (Author.getPhoneAuthor().matches("0[0-9s.-]{9,10}") == false) {
+			return false;
+		} else if (Author.getEmailAuthor()!=null) {
+			return false;
+		} else if (Author.getEmailAuthor()
+				.matches("[a-zA-Z0-9_\\\\.]+@[a-zA-Z]+\\\\.[a-zA-Z]+(\\\\.[a-zA-Z]+)*") == false) {
+			return false;
+		} else if (Author.getAddressAuthor().equals("")) {
+			return false;
+		} else {
+			return AuhorDAO.addAuthor(Author);
+		}
+
 	}
 
 	@Override
@@ -119,9 +136,8 @@ public class AuhorServicesImpl implements AuthorServices {
 
 	@Override
 	public TbAuthor getAuthorByName(String name) {
-		if(!name.equals(""))
-		{
-			return  AuhorDAO.getAuthorByName(name);
+		if (!name.equals("")) {
+			return AuhorDAO.getAuthorByName(name);
 		}
 		return null;
 	}

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.angile.AuthorTest.AuthorDaoTestNg">
+      <class name="com.angile.LibraryTest.ThemeTest">
         <methods>
-          <include name="addAuthor_02"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="addTheme" invocation-numbers="0"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.angile.AuthorTest.AuthorDaoTestNg -->
+      </class> <!-- com.angile.LibraryTest.ThemeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

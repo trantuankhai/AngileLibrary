@@ -1,0 +1,10 @@
+<suite name="Test Suite">
+	<test name="Library Test">
+		<classes>
+			<class name="com.angile.LibraryTest.AuthorDaoTestNg"/>
+			<class name="com.angile.LibraryTest.BookTest"/>
+			<class name="com.angile.LibraryTest.PlubhingTest"/>
+			<class name="com.angile.LibraryTest.ThemeTest"/>
+		</classes>
+	</test>
+</suite>
