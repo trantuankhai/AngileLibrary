@@ -53,10 +53,12 @@ public class BookDAOImpl implements BookDAO {
 	}
 
 	@Override
-	public boolean editBook(int id_book) {
+	public boolean editBook(int id_book, TbBook book) {
 		Session session = sessionFactoty.openSession();
 		try {
 			session.getTransaction().begin();
+			book.setId(id_book);
+			session.update(book);
 			session.getTransaction().commit();
 			return true;
 		} catch (Exception e) {
@@ -69,7 +71,7 @@ public class BookDAOImpl implements BookDAO {
 	}
 
 	@Override
-	public boolean removeBook(int id_book) {
+	public boolean removeBook(Integer id_book) {
 		Session session = sessionFactoty.openSession();
 		try {
 			session.getTransaction().begin();
@@ -79,10 +81,12 @@ public class BookDAOImpl implements BookDAO {
 		} catch (Exception e) {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
+			e.printStackTrace();
+			return false;
 		} finally {
 			session.close();
 		}
-		return false;
+
 	}
 
 	@Override
@@ -121,6 +125,23 @@ public class BookDAOImpl implements BookDAO {
 			session.close();
 		}
 		return null;
+	}
+
+	@Override
+	public boolean deleteAll() {
+		Session session = sessionFactoty.openSession();
+		try {
+			session.getTransaction().begin();
+			Query query = session.createQuery("delete from TbBook");
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+		} finally {
+			session.close();
+		}
+		return false;
 	}
 
 }

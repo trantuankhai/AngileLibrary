@@ -9,7 +9,7 @@ public interface AuthorServices {
 	public boolean addAuthor(TbAuthor Author);
 	public boolean editAuthor(int id_author,TbAuthor author);
 	public boolean removeAuthor(int id_Author);
-	public TbAuthor getAuthorById(int id_Author);
+	public TbAuthor getAuthorById(Integer id_Author);
 	public boolean exportExcel();
 	public TbAuthor getAuthorByName(String name);
 

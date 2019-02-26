@@ -57,7 +57,7 @@ public class ThemeServicesImpl implements ThemeServices {
 	}
 
 	@Override
-	public TbTheme showThemeById(int id_Theme) {
+	public TbTheme showThemeById(Integer id_Theme) {
 		// TODO Auto-generated method stub
 		return themeDAo.showThemeById(id_Theme);
 	}
@@ -119,6 +119,11 @@ public class ThemeServicesImpl implements ThemeServices {
 		HSSFCellStyle style = workbook.createCellStyle();
 		style.setFont(font);
 		return style;
+	}
+
+	@Override
+	public List<TbTheme> showThemeIsBook() {
+		return themeDAo.showThemeIsBook();
 	}
 
 }

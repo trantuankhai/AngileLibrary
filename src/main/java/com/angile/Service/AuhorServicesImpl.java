@@ -28,16 +28,12 @@ public class AuhorServicesImpl implements AuthorServices {
 
 	@Override
 	public boolean addAuthor(TbAuthor Author) {
-		if (Author.getNameAuthor()!=null) {
+		if (Author.getNameAuthor() == null) {
 			return false;
-		} else if (Author.getPhoneAuthor()!=null) {
+		} else if (Author.getPhoneAuthor() == null || Author.getPhoneAuthor().matches("0[0-9s.-]{9,10}") == false) {
 			return false;
-		} else if (Author.getPhoneAuthor().matches("0[0-9s.-]{9,10}") == false) {
-			return false;
-		} else if (Author.getEmailAuthor()!=null) {
-			return false;
-		} else if (Author.getEmailAuthor()
-				.matches("[a-zA-Z0-9_\\\\.]+@[a-zA-Z]+\\\\.[a-zA-Z]+(\\\\.[a-zA-Z]+)*") == false) {
+		} else if (Author.getEmailAuthor() == null
+				|| Author.getEmailAuthor().matches("[a-zA-Z0-9_\\.]+@[a-zA-Z]+\\.[a-zA-Z]+(\\.[a-zA-Z]+)*") == false) {
 			return false;
 		} else if (Author.getAddressAuthor().equals("")) {
 			return false;
@@ -60,7 +56,7 @@ public class AuhorServicesImpl implements AuthorServices {
 	}
 
 	@Override
-	public TbAuthor getAuthorById(int id_Author) {
+	public TbAuthor getAuthorById(Integer id_Author) {
 		// TODO Auto-generated method stub
 		return AuhorDAO.getAuthorById(id_Author);
 	}

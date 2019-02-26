@@ -88,7 +88,7 @@ public class PublishingDaoImpl implements PublishingDao {
 	}
 
 	@Override
-	public TbPlublishing getPublishingById(int id_Publishing) {
+	public TbPlublishing getPublishingById(Integer id_Publishing) {
 		Session session = sessionFactoty.openSession();
 		TbPlublishing plublishing = null;
 		try {
@@ -120,6 +120,23 @@ public class PublishingDaoImpl implements PublishingDao {
 			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
 			return null;
+		} finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public boolean deleteAllPublishing() {
+		Session session = sessionFactoty.openSession();
+		try {
+			session.getTransaction().begin();
+			session.createQuery("delete from TbPlublishing");
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			return false;
 		} finally {
 			session.close();
 		}

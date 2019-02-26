@@ -27,8 +27,18 @@ public class PublishingServicesimpl implements PublishingServices {
 
 	@Override
 	public boolean addPublishing(TbPlublishing Publishing) {
-		// TODO Auto-generated method stub
-		return PublishingServicesimpl.addPublishing(Publishing);
+		if (Publishing.getNamePublishing() == null) {
+			return false;
+		} else if (Publishing.getPhonePublishing() == null || Publishing.getPhonePublishing().matches("0[0-9s.-]{9,10}")==false) {
+			return false;
+		} else if (Publishing.getEmailPublishing() == null || Publishing.getEmailPublishing().matches("[a-zA-Z0-9_\\.]+@[a-zA-Z]+\\.[a-zA-Z]+(\\.[a-zA-Z]+)*")==false) {
+			return false;
+		} else if (Publishing.getAddressPublishing() == null) {
+			return false;
+		} else {
+			return PublishingServicesimpl.addPublishing(Publishing);
+		}
+
 	}
 
 	@Override
@@ -38,7 +48,7 @@ public class PublishingServicesimpl implements PublishingServices {
 	}
 
 	@Override
-	public TbPlublishing getPublishingById(int id_Publishing) {
+	public TbPlublishing getPublishingById(Integer id_Publishing) {
 		// TODO Auto-generated method stub
 		return PublishingServicesimpl.getPublishingById(id_Publishing);
 	}

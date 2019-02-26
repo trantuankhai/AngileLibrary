@@ -9,7 +9,7 @@ public interface PublishingServices {
 	public boolean addPublishing(TbPlublishing Publishing);
 	public boolean editPublishing(int id_Publishing , TbPlublishing plublishing);
 	public boolean removePublishing(int id_Publishing);
-	public TbPlublishing getPublishingById(int id_Publishing);
+	public TbPlublishing getPublishingById(Integer id_Publishing);
 	public boolean exportExcel();
 	public TbPlublishing getPublishingByName(String name);
 

@@ -89,7 +89,7 @@ public class AuthorDaoImpl implements AuthorDao {
 	}
 
 	@Override
-	public TbAuthor getAuthorById(int id_Author) {
+	public TbAuthor getAuthorById(Integer id_Author) {
 		Session session = sessionFactoty.openSession();
 		TbAuthor author = null;
 		try {
@@ -122,6 +122,23 @@ public class AuthorDaoImpl implements AuthorDao {
 			session.close();
 		}
 		return null;
+	}
+
+	@Override
+	public boolean deleteAllAuthor() {
+		Session session = sessionFactoty.openSession();
+		try {
+			session.getTransaction().begin();
+			session.createQuery("delete from TbAuthor");
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+		} finally {
+			session.close();
+		}
+		return false;
 	}
 
 }

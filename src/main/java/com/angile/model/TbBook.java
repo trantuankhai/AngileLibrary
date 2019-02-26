@@ -24,15 +24,15 @@ public class TbBook implements java.io.Serializable
 	@SequenceGenerator(name = "SEQ_TB_BOOK", sequenceName = "SEQ_TB_BOOK", allocationSize = 1)
 	@Column(name="ID_BOOK")
 	private Integer id;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name="ID_THEME")
 	private TbTheme idTheme;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name="ID_PUBLISHING") 
 	private TbPlublishing idPublishing;
 	@Column(name="NAME_BOOK")
 	private String nameBook;
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne()
 	@JoinColumn(name="ID_AUTHOR")
 	private TbAuthor idAuthor;
 	@Column(name="PUBLISHING_YEAR")

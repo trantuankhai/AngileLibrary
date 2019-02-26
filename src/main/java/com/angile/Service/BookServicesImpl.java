@@ -28,37 +28,63 @@ public class BookServicesImpl implements BookServices {
 
 	@Override
 	public boolean addBook(TbBook book) {
-//		if (book.getNameBook().equals("")) {
-//			JOptionPane.showMessageDialog(null, "Bạn chưa nhập tiêu đề sách");
-//			return false;
-//		} else if (book.getPublishingYear().equals("") || book.getPublishingYear().matches("^[0-3]+$")==false) {
-//			JOptionPane.showMessageDialog(null, "Bạn chưa nhập năm xuất bản hoặc không đúng định dạng");
-//				return false;
-//		} else if (book.getNumberOfPages().equals("") || book.getNumberOfPages().matches("^[0-9]+$")==false) {
-//			JOptionPane.showMessageDialog(null,"Bạn chưa nhập số trang hoặc không đúng định dạng");
-//			return false;
-//		} else if (book.getPriceBook().equals("")|| book.getPriceBook().matches("^[0-9]+$")==false) {
-//			JOptionPane.showMessageDialog(null, "Bạn chưa nhập giá hoặc không đúng định dạng");
-//			return false;
-//
-//		} else if (tfCount.getText().equals("")|| tfYear.getText().matches("^[0-9]+$")==false) {
-//			JOptionPane.showMessageDialog(null,"Bạn chưa nhập số bản lưu hoặc không đúng định dạng");
-//			return false;
-//		}else {
-		return bookDaoImpl.addBook(book);
-		// }
+		if (book.getNameBook()==null) {
+			return false;
+		} else if (book.getPublishingYear()==null
+				|| Integer.toString(book.getPublishingYear()).matches("^[0-3]+$") == false) {
+			return false;
+		} else if (book.getNumberOfPages()==null
+				|| Integer.toString(book.getNumberOfPages()).matches("^[0-9]+$") == false) {
+			return false;
+		} else if (book.getPriceBook()==null|| book.getPriceBook().matches("^[0-9]+$") == false) {
+			return false;
+
+		} else if (book.getStorageNumber()==null
+				|| Integer.toString(book.getStorageNumber()).matches("^[0-9]+$") == false) {
+			return false;
+		} else {
+			return bookDaoImpl.addBook(book);
+		}
 	}
+	public boolean addBookValidate(String idTheme,String IdNbx ,String nameBook , 
+			String idAuthor,String PublishingYear,String numberOfPage,String price
+			, String sobanluu,String language) {
+		if(idTheme == null ||idTheme.equals("^[0-9]+$")==false) {
+			return false;
+		}else if(IdNbx == null ||IdNbx.equals("^[0-9]+$")==false) {
+			return false;
+		}else if(nameBook == null) {
+			return false;
+		}else if(idAuthor==null ||idAuthor.matches("^[0-9]+$")==false) {
+			return false;
+		}else if(PublishingYear == null||PublishingYear.matches("^[0-3]+$")==false) {
+			return false;
+		}else if(numberOfPage== null || numberOfPage.matches("^[0-9]+$")==false) {
+			return false;
+			
+		}else if(price == null || price.matches("^[0-9]+$")==false) {
+			return false;
+		}else if(sobanluu == null || sobanluu.matches("^[5-9]+$")==false) {
+			return false;
+		}else if(language ==null ||language.matches("^0|1|2$") ==false) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
 
 	@Override
-	public boolean editBook(int id_book) {
+	public boolean editBook(int id_book ,TbBook book) {
 		// TODO Auto-generated method stub
-		return false;
+		return bookDaoImpl.editBook(id_book, book);
 	}
 
 	@Override
 	public boolean removeBook(int id_book) {
 		// TODO Auto-generated method stub
-		return false;
+		return bookDaoImpl.removeBook(id_book);
 	}
 
 	@Override

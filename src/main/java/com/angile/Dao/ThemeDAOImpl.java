@@ -1,5 +1,6 @@
 package com.angile.Dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -9,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 
 import com.angile.model.TbTheme;
 
-public class ThemeDAOImpl implements ThemeDAO  {
+public class ThemeDAOImpl implements ThemeDAO {
 	private final static SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml")
 			.buildSessionFactory();
 
@@ -49,7 +50,7 @@ public class ThemeDAOImpl implements ThemeDAO  {
 		} finally {
 			session.close();
 		}
-		}
+	}
 
 	@Override
 	public boolean removeTheme(int id_Theme) {
@@ -81,53 +82,91 @@ public class ThemeDAOImpl implements ThemeDAO  {
 			session.getTransaction().commit();
 			return true;
 		} catch (Exception e) {
-			if(session.getTransaction()!=null)
+			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
 			e.printStackTrace();
-		}finally {
+		} finally {
 			session.close();
 		}
 		return false;
 	}
 
 	@Override
-	public TbTheme showThemeById(int id_Theme) {
+	public TbTheme showThemeById(Integer id_Theme) {
 		Session session = sessionFactory.openSession();
-		TbTheme  theme = null;
+		TbTheme theme = null;
 		try {
 			session.getTransaction().begin();
-			  theme = session.get(TbTheme.class, id_Theme);
+			theme = session.get(TbTheme.class, id_Theme);
 			session.getTransaction().commit();
 			return theme;
 		} catch (Exception e) {
-			if(session.getTransaction()!=null)
+			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
 			e.printStackTrace();
-		}finally {
+		} finally {
 			session.close();
 		}
 		return theme;
 	}
 
-	public  TbTheme searchTheme(String nameTheme) {
+	public TbTheme searchTheme(String nameTheme) {
 		Session session = sessionFactory.openSession();
-		TbTheme  theme = null;
+		TbTheme theme = null;
 		try {
 			session.getTransaction().begin();
-			theme = (TbTheme)session.createQuery("from TbTheme t where t.nameTheme =:nametheme").setParameter("nametheme", nameTheme).uniqueResult();
+			theme = (TbTheme) session.createQuery("from TbTheme t where t.nameTheme =:nametheme")
+					.setParameter("nametheme", nameTheme).uniqueResult();
 			session.getTransaction().commit();
 			return theme;
 		} catch (Exception e) {
-			if(session.getTransaction()!=null)
+			if (session.getTransaction() != null)
 				session.getTransaction().rollback();
-				e.printStackTrace();
-				return null;
-		}finally {
+			e.printStackTrace();
+			return null;
+		} finally {
 			session.close();
 		}
 
 	}
-	
+
+	@Override
+	public boolean deleteAllTheme() {
+		Session session = sessionFactory.openSession();
+		try {
+			session.getTransaction().begin();
+			session.createQuery("delete from TbTheme");
+			session.getTransaction().commit();
+			return true;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return false;
+	}
+
+	@Override
+	public List<TbTheme> showThemeIsBook() {
+		Session session = sessionFactory.openSession();
+		List<TbTheme> theme = new ArrayList<>();
+		try {
+			session.getTransaction().begin();
+			theme =  session.createQuery("from TbTheme t where t.id in( select id from TbBook) ")
+					.list();
+			session.getTransaction().commit();
+			return theme;
+		} catch (Exception e) {
+			if (session.getTransaction() != null)
+				session.getTransaction().rollback();
+			e.printStackTrace();
+			return null;
+		} finally {
+			session.close();
+		}
+
+	}
+
 }
-
-

@@ -23,7 +23,7 @@ public class TbPlublishing implements java.io.Serializable
 	private Integer id;
 	@Column(name="NAME_PUBLISHING")
 	private String namePublishing;
-	@Column(name="SDT_PUBLISHING")
+	@Column(name="PHONE_PUBLISHING")
 	private String phonePublishing;
 	@Column(name="ADDRESS_PUBLISHING")
 	private String addressPublishing;

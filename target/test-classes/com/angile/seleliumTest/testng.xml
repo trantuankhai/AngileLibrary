@@ -1,0 +1,12 @@
+<suite name="Test Suite" verbose="1">
+	<test name="Test Add Staffs">
+		<classes>
+			<class name="com.angile.seleliumTest.TestInputEmail"/>
+			<class name="com.angile.seleliumTest.TestInputLuong"/>
+			<class name="com.angile.seleliumTest.TestInputName"/>
+			<class name="com.angile.seleliumTest.TestInputPhone"/>
+			<class name="com.angile.seleliumTest.TestInputPhoto"/>
+			<class name="com.angile.seleliumTest.TestInputYear"/>
+		</classes>
+	</test>
+</suite>

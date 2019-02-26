@@ -19,7 +19,6 @@ import com.angile.Service.ThemeServicesImpl;
 import com.angile.model.TbAuthor;
 import com.angile.model.TbBook;
 import com.angile.model.TbPlublishing;
-import com.angile.model.TbTemp;
 import com.angile.model.TbTheme;
 
 import java.awt.event.MouseAdapter;
@@ -118,6 +117,9 @@ public class BookManager extends javax.swing.JFrame {
 	}
 
 	void showDetailBook(int id_book) {
+		cboTheme.removeAllItems();
+		cboAuthor.removeAllItems();
+		cboPublicshing.removeAllItems();
 		TbBook book = bookServicesImpl.getBookById(id_book);
 		tfCode.setText(book.getId() + "");
 		tfTitle.setText(book.getNameBook());
@@ -125,6 +127,9 @@ public class BookManager extends javax.swing.JFrame {
 		tfPage.setText(book.getNumberOfPages() + "");
 		tfCount.setText(book.getStorageNumber() + "");
 		tfPrice.setText(book.getPriceBook());
+		cboAuthor.addItem(book.getIdAuthor().getNameAuthor());
+		cboPublicshing.addItem(book.getIdPublishing().getNamePublishing());
+		cboTheme.addItem(book.getIdTheme().getNameTheme());
 		if (book.getLanguaage() == 1) {
 			rdoVn.setSelected(true);
 		} else if (book.getLanguaage() == 2) {
@@ -136,7 +141,7 @@ public class BookManager extends javax.swing.JFrame {
 
 	@SuppressWarnings("all")
 	void addItemComboboxTheme() {
-		cboTheme.removeAll();
+		cboTheme.removeAllItems();
 		for (TbTheme x : themeServicesImpl.getTheme(0, 10)) {
 			cboTheme.addItem(x.getNameTheme());
 		}
@@ -165,13 +170,14 @@ public class BookManager extends javax.swing.JFrame {
 		tfPrice.setText(null);
 		tfPage.setText(null);
 		tfYear.setText(null);
+		rdoVn.setSelected(true);
 	}
 
 	boolean validateBook() {
 		if (tfTitle.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "Bạn chưa nhập tiêu đề sách");
 			return false;
-		} else if (tfYear.getText().equals("") || tfYear.getText().matches("^[0-3]+$")==false) {
+		} else if (tfYear.getText().equals("") || tfYear.getText().matches("^[1-9]+$")==false) {
 			JOptionPane.showMessageDialog(null, "Bạn chưa nhập năm xuất bản hoặc không đúng định dạng");
 				return false;
 		} else if (tfPage.getText().equals("") || tfYear.getText().matches("^[0-9]+$")==false) {
@@ -197,6 +203,26 @@ public class BookManager extends javax.swing.JFrame {
 		}else
 		{
 			JOptionPane.showMessageDialog(null,"Thêm sách không thành công");
+		}
+	}
+	void updateBook(Integer id , TbBook book)
+	{
+		if(bookServicesImpl.editBook(id, book)==true)
+		{
+			showDataTableBook();
+			
+		}else
+		{
+			JOptionPane.showMessageDialog(null, "Lỗi trong quá trình cập nhập");
+		}
+	}
+	void deleteBook(int id)
+	{
+		if (bookServicesImpl.removeBook(id)==true) {
+			JOptionPane.showMessageDialog(null, "xóa thành công");
+			showDataTableBook();
+		}else {
+			JOptionPane.showMessageDialog(null, "Lỗi trong quá trình xóa");
 		}
 	}
 
@@ -236,10 +262,26 @@ public class BookManager extends javax.swing.JFrame {
 			public void mouseClicked(MouseEvent arg0) {
 				if(jCheckBox1.isSelected()==true)
 				{
-					System.out.println("1");
+				List<TbTheme> theme=themeServicesImpl.showThemeIsBook();
+				if(theme != null)
+				{
+					tableModel = (DefaultTableModel) tblTheme.getModel();
+					tableModel.setRowCount(0);
+					for (TbTheme x : theme) {
+						tableModel.addRow(new Object[] { x.getId(), x.getNameTheme() });
+					}
+				}
 				}else
 				{
-					System.out.println("2");
+					List<TbTheme> theme=themeServicesImpl.getTheme(0,100);
+					if(theme != null)
+					{
+						tableModel = (DefaultTableModel) tblTheme.getModel();
+						tableModel.setRowCount(0);
+						for (TbTheme x : theme) {
+							tableModel.addRow(new Object[] { x.getId(), x.getNameTheme() });
+						}
+					}
 				}
 			}
 		});
@@ -252,9 +294,19 @@ public class BookManager extends javax.swing.JFrame {
 				swith_Enabled(true);
 				btnSave.setEnabled(true);
 				btnIrmoge.setEnabled(true);
+				addItemComboboxAuthor();
+				addItemComboboxTheme();
+				addItemComboxPublishing();
 			}
 		});
 		btnDelete = new javax.swing.JButton();
+		btnDelete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa không")==0) {
+					deleteBook((Integer)tblBook.getValueAt(tblBook.getSelectedRow(), 0));
+				}
+			}
+		});
 		btnSave = new javax.swing.JButton();
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -262,6 +314,12 @@ public class BookManager extends javax.swing.JFrame {
 					if(validateBook()==true)
 					{
 						addBook(getBookFromForm());
+					}
+				}else if(flag == 3)
+				{
+					if (validateBook()) {
+						updateBook((Integer)tblBook.getValueAt(tblBook.getSelectedRow(),0), getBookFromForm());
+						
 					}
 				}
 			}
@@ -316,6 +374,7 @@ public class BookManager extends javax.swing.JFrame {
 				showDetailBook((Integer) tblBook.getValueAt(tblBook.getSelectedRow(), 0));
 				btnEdit.setEnabled(true);
 				btnDelete.setEnabled(true);
+				swith_Enabled(false);
 			}
 		});
 		jMenuBar1 = new javax.swing.JMenuBar();
