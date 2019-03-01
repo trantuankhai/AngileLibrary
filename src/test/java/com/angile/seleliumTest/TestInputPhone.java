@@ -19,7 +19,7 @@ import org.testng.annotations.AfterTest;
 
 public class TestInputPhone {
 	WebDriver driver;
-	@Test(description = "Không nhập trường Phone", groups = "txtPhone", priority = 26)
+	@Test(description = "Không nhập trường Phone", groups = "TestPhone", priority = 25)
 	public void Add_01() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -34,7 +34,7 @@ public class TestInputPhone {
 		}
 	}
 
-	@Test(description = "nhập trường Phone chứa ký tự đặc biệt (!@#$%^&*)", groups = "txtPhone", priority = 27)
+	@Test(description = "nhập trường Phone chứa ký tự đặc biệt (!@#$%^&*)", groups = "TestPhone", priority = 26)
 	public void Add_02() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -51,7 +51,7 @@ public class TestInputPhone {
 
 	}
 
-	@Test(description = "nhập trường Phone chứa ký tự số 4558556", groups = "txtPhone", priority = 28)
+	@Test(description = "nhập trường Phone chứa ký tự số 4558556",groups = "TestPhone", priority = 27)
 	public void Add_03() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -67,7 +67,7 @@ public class TestInputPhone {
 
 	}
 	
-	@Test(description = "nhập trường Phone chứa ký tự chữ a-zA-z", groups = "txtPhone", priority = 29)
+	@Test(description = "nhập trường Phone chứa ký tự chữ a-zA-z", groups = "TestPhone", priority = 28)
 	public void Add_04() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -83,7 +83,7 @@ public class TestInputPhone {
 
 	}
 	
-	@Test(description = "nhập trường Phone chứa 5 kí tự", groups = "txtPhone", priority = 30)
+	@Test(description = "nhập trường Phone chứa 5 kí tự", groups = "TestPhone", priority = 29)
 	public void Add_05() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -99,7 +99,7 @@ public class TestInputPhone {
 
 	}
 	
-	@Test(description = "nhập trường Phone chứa 6 kí tự", groups = "txtPhone", priority = 31)
+	@Test(description = "nhập trường Phone chứa 6 kí tự",groups = "TestPhone", priority = 30)
 	public void Add_06() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -114,7 +114,7 @@ public class TestInputPhone {
 		}
 	}
 	
-	@Test(description = "nhập trường Phone chứa 13 kí tự", groups = "txtPhone", priority = 32)
+	@Test(description = "nhập trường Phone chứa 13 kí tự",groups = "TestPhone", priority = 31)
 	public void Add_07() {
 		try {
 			WebElement fieldPhone = driver.findElement(By.id("txtPhone"));
@@ -128,9 +128,10 @@ public class TestInputPhone {
 		}
 	}
 	
-	@Test(description = "nhập trường Phone chứa 14 kí tự", groups = "txtPhone", priority = 33)
+	@Test(description = "nhập trường Phone chứa 14 kí tự", groups = "TestPhone", priority = 32)
 	public void Add_08() {
 		try {
+			
 			WebElement fieldPhone = driver.findElement(By.id("txtEmial"));
 			fieldPhone.sendKeys("55555555555555");
 			WebElement submit = driver.findElement(By.id("btnSubmit"));
@@ -160,16 +161,6 @@ public class TestInputPhone {
 
   @AfterMethod
   public void afterMethod() {
-		WebElement element = driver.findElement(By.id("txtName"));
-		element.sendKeys("");
-		WebElement element2 = driver.findElement(By.id("txtYear"));
-		element2.sendKeys("");
-		WebElement element3 = driver.findElement(By.id("txtSalary"));
-		element3.sendKeys("");
-		WebElement element4 = driver.findElement(By.id("txtEmail"));
-		element4.sendKeys("");
-		WebElement element5 = driver.findElement(By.id("txtPhone"));
-		element5.sendKeys("");
   }
 
   @BeforeTest

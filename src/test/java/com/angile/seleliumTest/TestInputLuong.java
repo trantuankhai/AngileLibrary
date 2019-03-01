@@ -17,7 +17,7 @@ import org.testng.annotations.AfterTest;
 
 public class TestInputLuong {
 	WebDriver driver;
-	@Test(description = "Không nhập trường Salary", groups = "txtSalary", priority = 34)
+	@Test(description = "Không nhập trường Salary", groups = "txtSalary", priority = 10)
 	public void Add_01() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -31,7 +31,7 @@ public class TestInputLuong {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "nhập trường Salary chứa ký tự đặc biệt (!@#$%^&*)", groups = "txtSalary", priority = 35)
+	@Test(description = "nhập trường Salary chứa ký tự đặc biệt (!@#$%^&*)", groups = "txtSalary", priority = 11)
 	public void Add_02() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -47,7 +47,7 @@ public class TestInputLuong {
 		}
 
 	}
-	@Test(description = "nhập trường Salary chứa ký tự số 4558556", groups = "txtSalary", priority = 36)
+	@Test(description = "nhập trường Salary chứa ký tự số 4558556", groups = "txtSalary", priority = 12)
 	public void Add_03() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -62,7 +62,7 @@ public class TestInputLuong {
 		}
 
 	}
-	@Test(description = "nhập trường Salary chứa ký tự chữ a-zA-z", groups = "txtSalary", priority = 37)
+	@Test(description = "nhập trường Salary chứa ký tự chữ a-zA-z", groups = "txtSalary", priority = 13)
 	public void Add_04() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -78,7 +78,7 @@ public class TestInputLuong {
 
 	}
 	
-	@Test(description = "nhập trường Salary chứa 3 kí tự", groups = "txtSalary", priority = 38)
+	@Test(description = "nhập trường Salary chứa 3 kí tự", groups = "txtSalary", priority = 14)
 	public void Add_05() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -93,7 +93,7 @@ public class TestInputLuong {
 		}
 
 	}
-	@Test(description = "nhập trường Salary chứa 4 kí tự", groups = "txtSalary", priority = 39)
+	@Test(description = "nhập trường Salary chứa 4 kí tự", groups = "txtSalary", priority = 15)
 	public void Add_06() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -107,7 +107,7 @@ public class TestInputLuong {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "nhập trường Salary chứa 7 kí tự", groups = "txtSalary", priority = 40)
+	@Test(description = "nhập trường Salary chứa 7 kí tự", groups = "txtSalary", priority = 16)
 	public void Add_07() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtSalary"));
@@ -120,7 +120,7 @@ public class TestInputLuong {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "nhập trường Salary chứa 8 kí tự", groups = "txtSalary", priority = 41)
+	@Test(description = "nhập trường Salary chứa 8 kí tự", groups = "txtSalary", priority = 17)
 	public void Add_08() {
 		try {
 			WebElement fieldSalary = driver.findElement(By.id("txtEmial"));

@@ -19,7 +19,7 @@ import org.testng.annotations.AfterTest;
 public class TestInputEmail {
 	WebDriver driver;
 
-	@Test(description = "Không nhập trường Email")
+	@Test(description = "Không nhập trường Email",groups="testEmail" , priority=1)
 	public void Add_01() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -34,7 +34,7 @@ public class TestInputEmail {
 		}
 	}
 
-	@Test(description = "nhập trường Email chứa ký tự đặc biệt (!@#$%^&*)")
+	@Test(description = "nhập trường Email chứa ký tự đặc biệt (!@#$%^&*)" ,groups="testEmail" , priority=2)
 	public void Add_02() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -50,7 +50,7 @@ public class TestInputEmail {
 
 	}
 
-	@Test(description = "nhập trường Email chứa ký tự số 4558556")
+	@Test(description = "nhập trường Email chứa ký tự số 4558556",groups="testEmail" , priority=3)
 	public void Add_03() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -66,7 +66,7 @@ public class TestInputEmail {
 
 	}
 
-	@Test(description = "nhập trường Email chứa ký tự chữ a-zA-z")
+	@Test(description = "nhập trường Email chứa ký tự chữ a-zA-z",groups="testEmail" , priority=4)
 	public void Add_04() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -82,7 +82,7 @@ public class TestInputEmail {
 
 	}
 
-	@Test(description = "nhập trường Email chứa 7 kí tự")
+	@Test(description = "nhập trường Email chứa 7 kí tự",groups="testEmail" , priority=5)
 	public void Add_05() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -99,7 +99,7 @@ public class TestInputEmail {
 
 	}
 
-	@Test(description = "nhập trường Email chứa 8 kí tự")
+	@Test(description = "nhập trường Email chứa 8 kí tự",groups="testEmail" , priority=6)
 	public void Add_06() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -114,7 +114,7 @@ public class TestInputEmail {
 		}
 	}
 
-	@Test(description = "nhập trường Email chứa 50 kí tự")
+	@Test(description = "nhập trường Email chứa 50 kí tự",groups="testEmail" , priority=7)
 	public void Add_07() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));
@@ -128,7 +128,7 @@ public class TestInputEmail {
 		}
 	}
 
-	@Test(description = "nhập trường Email chứa 51 kí tự")
+	@Test(description = "nhập trường Email chứa 51 kí tự",groups="testEmail" , priority=8)
 	public void Add_08() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmial"));
@@ -144,7 +144,7 @@ public class TestInputEmail {
 		}
 	}
 
-	@Test(description = "nhập trường Email sai định dạng")
+	@Test(description = "nhập trường Email sai định dạng",groups="testEmail" , priority=9)
 	public void Add_09() {
 		try {
 			WebElement fieldEmail = driver.findElement(By.id("txtEmail"));

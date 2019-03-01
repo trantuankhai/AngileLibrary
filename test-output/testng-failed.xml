@@ -3,17 +3,10 @@
 <suite name="Failed suite [Test Suite]">
   <test thread-count="5" name="Library Test(failed)">
     <classes>
-      <class name="com.angile.LibraryTest.PlubhingTest">
-        <methods>
-          <include name="addPublishing" invocation-numbers="9"/>
-          <include name="beforeTest"/>
-          <include name="afterTest"/>
-        </methods>
-      </class> <!-- com.angile.LibraryTest.PlubhingTest -->
       <class name="com.angile.LibraryTest.ThemeTest">
         <methods>
           <include name="afterTest"/>
-          <include name="addTheme" invocation-numbers="0"/>
+          <include name="addTheme" invocation-numbers="0 1"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.angile.LibraryTest.ThemeTest -->

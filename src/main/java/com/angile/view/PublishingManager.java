@@ -17,6 +17,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -168,6 +169,7 @@ public class PublishingManager extends javax.swing.JFrame {
 		jLabel7 = new javax.swing.JLabel();
 		tfSearchPublishing = new javax.swing.JTextField();
 		btnSearch = new javax.swing.JButton();
+		btnSearch.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_search.png"));
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tfSearchPublishing.getText().equals(""))
@@ -180,12 +182,14 @@ public class PublishingManager extends javax.swing.JFrame {
 			}
 		});
 		btnExcel = new javax.swing.JButton();
+		btnExcel.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\Transfer.png"));
 		btnExcel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				publishingServicesimpl.exportExcel();
 			}
 		});
 		btnEdit = new javax.swing.JButton();
+		btnEdit.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\edit.png"));
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				swithEnabled(true);
@@ -195,6 +199,7 @@ public class PublishingManager extends javax.swing.JFrame {
 			}
 		});
 		btnDelete = new javax.swing.JButton();
+		btnDelete.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_delete.png"));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa") == 0) {
@@ -203,6 +208,7 @@ public class PublishingManager extends javax.swing.JFrame {
 			}
 		});
 		btnSave = new javax.swing.JButton();
+		btnSave.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_save.png"));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 1) {
@@ -219,6 +225,7 @@ public class PublishingManager extends javax.swing.JFrame {
 			}
 		});
 		btnBoQua = new javax.swing.JButton();
+		btnBoQua.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_exit.png"));
 		btnBoQua.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 1) {
@@ -234,6 +241,7 @@ public class PublishingManager extends javax.swing.JFrame {
 			}
 		});
 		btnAdd = new javax.swing.JButton();
+		btnAdd.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_add.png"));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				swithEnabled(true);

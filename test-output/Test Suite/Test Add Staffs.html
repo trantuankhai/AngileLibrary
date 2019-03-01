@@ -1,0 +1,971 @@
+<html>
+<head>
+<title>TestNG:  Test Add Staffs</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test Add Staffs</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>24/19/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 27 19:03:58 ICT 2019</td>
+</tr>
+<tr><td>Total time:</td><td>110 seconds (110380 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_010()'><b>Add_010</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p tr??ng txtYear kí t? ch? a-zA-z </td>
+<td><div><pre>java.lang.AssertionError: expected [Please fill out this field.] but found [Please match the requested format.]
+	at com.angile.seleliumTest.TestInputYear.Add_010(TestInputYear.java:160)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace729375394", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace729375394'><pre>java.lang.AssertionError: expected [Please fill out this field.] but found [Please match the requested format.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputYear.Add_010(TestInputYear.java:160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_03()'><b>Add_03</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a ký t? s? 4558556</td>
+<td><div><pre>java.lang.AssertionError: expected [Please match the requested format.] but found []
+	at com.angile.seleliumTest.TestInputPhone.Add_03(TestInputPhone.java:63)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1953175805", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1953175805'><pre>java.lang.AssertionError: expected [Please match the requested format.] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputPhone.Add_03(TestInputPhone.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_05()'><b>Add_05</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a 7 kí t?</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please lengthen this text to 8 characters or more (you are currently using 7 characters).]
+	at com.angile.seleliumTest.TestInputEmail.Add_05(TestInputEmail.java:94)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1723290893", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1723290893'><pre>java.lang.AssertionError: expected [] but found [Please lengthen this text to 8 characters or more (you are currently using 7 characters).]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputEmail.Add_05(TestInputEmail.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_05()'><b>Add_05</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a 3 kí t?</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please lengthen this text to 4 characters or more (you are currently using 3 characters).]
+	at com.angile.seleliumTest.TestInputLuong.Add_05(TestInputLuong.java:90)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace664839586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace664839586'><pre>java.lang.AssertionError: expected [] but found [Please lengthen this text to 4 characters or more (you are currently using 3 characters).]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputLuong.Add_05(TestInputLuong.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_05()'><b>Add_05</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a 5 kí t?</td>
+<td><div><pre>java.lang.AssertionError: expected [Please match the requested format.] but found [Please lengthen this text to 6 characters or more (you are currently using 5 characters).]
+	at com.angile.seleliumTest.TestInputPhone.Add_05(TestInputPhone.java:95)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace921764975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace921764975'><pre>java.lang.AssertionError: expected [Please match the requested format.] but found [Please lengthen this text to 6 characters or more (you are currently using 5 characters).]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputPhone.Add_05(TestInputPhone.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_05()'><b>Add_05</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p tr??ng txtYear 31/12/2000</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at com.angile.seleliumTest.TestInputYear.Add_05(TestInputYear.java:88)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace580965610", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace580965610'><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputYear.Add_05(TestInputYear.java:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_06()'><b>Add_06</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a 6 kí t?</td>
+<td><div><pre>java.lang.AssertionError: expected [Please match the requested format.] but found []
+	at com.angile.seleliumTest.TestInputPhone.Add_06(TestInputPhone.java:111)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1293389141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1293389141'><pre>java.lang.AssertionError: expected [Please match the requested format.] but found []
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputPhone.Add_06(TestInputPhone.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_06()'><b>Add_06</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p tr??ng txtYear 01/01/1999</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at com.angile.seleliumTest.TestInputYear.Add_06(TestInputYear.java:103)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace937437482", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace937437482'><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputYear.Add_06(TestInputYear.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_07()'><b>Add_07</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p tr??ng txtYear 01/01/1950</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at com.angile.seleliumTest.TestInputYear.Add_07(TestInputYear.java:117)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1562452013", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1562452013'><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputYear.Add_07(TestInputYear.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_08()'><b>Add_08</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a 51 kí t?</td>
+<td><div><pre>java.lang.AssertionError: FAILL
+	at com.angile.seleliumTest.TestInputEmail.Add_08(TestInputEmail.java:143)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace708153797", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace708153797'><pre>java.lang.AssertionError: FAILL
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.angile.seleliumTest.TestInputEmail.Add_08(TestInputEmail.java:143)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_08()'><b>Add_08</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a 8 kí t?</td>
+<td><div><pre>java.lang.AssertionError: FAILL
+	at com.angile.seleliumTest.TestInputLuong.Add_08(TestInputLuong.java:135)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1244815033", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1244815033'><pre>java.lang.AssertionError: FAILL
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.angile.seleliumTest.TestInputLuong.Add_08(TestInputLuong.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_08()'><b>Add_08</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a 14 kí t?</td>
+<td><div><pre>java.lang.AssertionError: FAILL
+	at com.angile.seleliumTest.TestInputPhone.Add_08(TestInputPhone.java:144)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1372483461", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1372483461'><pre>java.lang.AssertionError: FAILL
+	at org.testng.Assert.fail(Assert.java:96)
+	at com.angile.seleliumTest.TestInputPhone.Add_08(TestInputPhone.java:144)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_08()'><b>Add_08</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p tr??ng txtYear 31/12/1949</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at com.angile.seleliumTest.TestInputYear.Add_08(TestInputYear.java:132)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1699511597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1699511597'><pre>java.lang.AssertionError: expected [] but found [Please match the requested format.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputYear.Add_08(TestInputYear.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_09()'><b>Add_09</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p tr??ng txtYear kí t? ??c bi?t</td>
+<td><div><pre>java.lang.AssertionError: expected [Please fill out this field.] but found [Please match the requested format.]
+	at com.angile.seleliumTest.TestInputYear.Add_09(TestInputYear.java:146)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace937366737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace937366737'><pre>java.lang.AssertionError: expected [Please fill out this field.] but found [Please match the requested format.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputYear.Add_09(TestInputYear.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhoto.add_01()'><b>add_01</b><br>Test class: com.angile.seleliumTest.TestInputPhoto</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Please select a file.]
+	at com.angile.seleliumTest.TestInputPhoto.add_01(TestInputPhoto.java:31)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace542019831", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace542019831'><pre>java.lang.AssertionError: expected [] but found [Please select a file.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputPhoto.add_01(TestInputPhoto.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhoto@5c3bd550</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_2()'><b>add_2</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Invalid input name.]
+	at com.angile.seleliumTest.TestInputName.add_2(TestInputName.java:39)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace842422776", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace842422776'><pre>java.lang.AssertionError: expected [] but found [Invalid input name.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputName.add_2(TestInputName.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_3()'><b>add_3</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td><div><pre>java.lang.AssertionError: expected [] but found [Invalid input name.]
+	at com.angile.seleliumTest.TestInputName.add_3(TestInputName.java:50)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1164394344", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1164394344'><pre>java.lang.AssertionError: expected [] but found [Invalid input name.]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputName.add_3(TestInputName.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_4()'><b>add_4</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td><div><pre>java.lang.AssertionError: expected [Please lengthen this text to 5 characters or more (you are currently using 2 characters).] but found [Please lengthen this text to 5 characters or more (you are currently using 4 characters).]
+	at com.angile.seleliumTest.TestInputName.add_4(TestInputName.java:61)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace645643802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace645643802'><pre>java.lang.AssertionError: expected [Please lengthen this text to 5 characters or more (you are currently using 2 characters).] but found [Please lengthen this text to 5 characters or more (you are currently using 4 characters).]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.angile.seleliumTest.TestInputName.add_4(TestInputName.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_7()'><b>add_7</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td><div><pre>java.lang.AssertionError: expected [31] but found [30]
+	at com.angile.seleliumTest.TestInputName.add_7(TestInputName.java:92)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1862900975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1862900975'><pre>java.lang.AssertionError: expected [31] but found [30]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:652)
+	at org.testng.Assert.assertEquals(Assert.java:662)
+	at com.angile.seleliumTest.TestInputName.add_7(TestInputName.java:92)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_01()'><b>Add_01</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: Không nh?p tr??ng Email</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_01()'><b>Add_01</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: Không nh?p tr??ng Salary</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_01()'><b>Add_01</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: Không nh?p tr??ng Phone</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_02()'><b>Add_02</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a ký t? ??c bi?t (!@#$%^&*)</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_02()'><b>Add_02</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a ký t? ??c bi?t (!@#$%^&*)</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_02()'><b>Add_02</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a ký t? ??c bi?t (!@#$%^&*)</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_02()'><b>Add_02</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Ch? nh?p Day trong tr??ng txtYear</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_03()'><b>Add_03</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a ký t? s? 4558556</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_03()'><b>Add_03</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a ký t? s? 4558556</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_03()'><b>Add_03</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Ch? nh?p Day,Month  trong tr??ng txtYear</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_04()'><b>Add_04</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a ký t? ch? a-zA-z</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_04()'><b>Add_04</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a ký t? ch? a-zA-z</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_04()'><b>Add_04</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a ký t? ch? a-zA-z</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.Add_04()'><b>Add_04</b><br>Test class: com.angile.seleliumTest.TestInputYear<br>Test method: Nh?p ??  tr??ng txtYear 03/05/1996</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_06()'><b>Add_06</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a 8 kí t?</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_06()'><b>Add_06</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a 4 kí t?</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_07()'><b>Add_07</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email ch?a 50 kí t?</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputLuong.Add_07()'><b>Add_07</b><br>Test class: com.angile.seleliumTest.TestInputLuong<br>Test method: nh?p tr??ng Salary ch?a 7 kí t?</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputLuong@3bfdc050</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputPhone.Add_07()'><b>Add_07</b><br>Test class: com.angile.seleliumTest.TestInputPhone<br>Test method: nh?p tr??ng Phone ch?a 13 kí t?</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputPhone@5e3a8624</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputEmail.Add_09()'><b>Add_09</b><br>Test class: com.angile.seleliumTest.TestInputEmail<br>Test method: nh?p tr??ng Email sai ??nh d?ng</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputEmail@42d80b78</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_01()'><b>add_01</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputYear.add_01()'><b>add_01</b><br>Test class: com.angile.seleliumTest.TestInputYear</td>
+<td></td>
+<td>1</td>
+<td>com.angile.seleliumTest.TestInputYear@91161c7</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_5()'><b>add_5</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+<tr>
+<td title='com.angile.seleliumTest.TestInputName.add_6()'><b>add_6</b><br>Test class: com.angile.seleliumTest.TestInputName</td>
+<td></td>
+<td>3</td>
+<td>com.angile.seleliumTest.TestInputName@1bce4f0a</td></tr>
+</table><p>
+</body>
+</html>

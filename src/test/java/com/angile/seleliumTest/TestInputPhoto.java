@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 public class TestInputPhoto {
 	WebDriver driver;
 
-	@Test
+	@Test(groups = "TestPhoto", priority = 33)
 	public void add_01()
 	{
 		try {

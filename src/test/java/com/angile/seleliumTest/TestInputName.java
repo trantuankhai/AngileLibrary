@@ -2,6 +2,7 @@ package com.angile.seleliumTest;
 
 import org.testng.annotations.Test;
 
+import oracle.net.jdbc.TNSAddress.Description;
 
 import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.By;
@@ -16,78 +17,78 @@ import org.testng.annotations.BeforeMethod;
 public class TestInputName {
 	WebDriver driver;
 
-	@Test
-	public void add_01() throws InterruptedException {
+	@Test(groups="TestName",priority=18 )
+	public void add_01() throws InterruptedException  {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		String actual = getHtml5ValidationMessage(txtname);
 		Assert.assertEquals("Please fill out this field.", actual);
 
 	}
-	@Test
+	@Test(groups="TestName",priority=19)
 	public void add_2() throws InterruptedException {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("!@#$%^&*");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		String actual = getHtml5ValidationMessage(txtname);
 		Assert.assertEquals("Invalid input name.", actual);
 		
 	}
-	@Test
+	@Test(groups="TestName",priority=20)
 	public void add_3() throws InterruptedException {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("123456789");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		String actual = getHtml5ValidationMessage(txtname);
 		Assert.assertEquals("Invalid input name.", actual);
 		
 	}
-	@Test
+	@Test(groups="TestName",priority=21)
 	public void add_4() throws InterruptedException {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("tt");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		String actual = getHtml5ValidationMessage(txtname);
 		Assert.assertEquals("Please lengthen this text to 5 characters or more (you are currently using 4 characters).", actual);
 		
 	}
-	@Test
+	@Test(groups="TestName",priority=22)
 	public void add_5() throws InterruptedException {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("ttttt");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		String actual = getHtml5ValidationMessage(txtname);
 		Assert.assertEquals("", actual);
 		
 	}
-	@Test
+	@Test(groups="TestName",priority=23)
 	public void add_6() throws InterruptedException {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("tttttttttttttttttttttttttttttt");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		Assert.assertEquals(txtname.getAttribute("value").length(), 30);
 		
 	}
-	@Test
+	@Test(groups="TestName",priority=24)
 	public void add_7() throws InterruptedException {
 		WebElement txtname = driver.findElement(By.id("txtName"));
 		WebElement submit = driver.findElement(By.id("btnSubmit"));
 		txtname.sendKeys("ttttttttttttttttttttttttttttttt");
 		submit.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		Assert.assertEquals(txtname.getAttribute("value").length(), 31);
 		
 	}

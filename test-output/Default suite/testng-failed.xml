@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.angile.seleliumTest.TestInputEmail">
+      <class name="com.angile.LibraryTest.ThemeTest">
         <methods>
-          <include name="Add_05"/>
-          <include name="beforeTest"/>
           <include name="afterTest"/>
-          <include name="Add_08"/>
-          <include name="beforeMethod"/>
+          <include name="addTheme" invocation-numbers="0 1"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.angile.seleliumTest.TestInputEmail -->
+      </class> <!-- com.angile.LibraryTest.ThemeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

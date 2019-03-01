@@ -30,6 +30,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -287,7 +288,9 @@ public class BookManager extends javax.swing.JFrame {
 		});
 		jPanel1 = new javax.swing.JPanel();
 		btnAdd = new javax.swing.JButton();
+		btnAdd.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_add.png"));
 		btnEdit = new javax.swing.JButton();
+		btnEdit.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\edit.png"));
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				flag = 3;
@@ -300,6 +303,7 @@ public class BookManager extends javax.swing.JFrame {
 			}
 		});
 		btnDelete = new javax.swing.JButton();
+		btnDelete.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_delete.png"));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa không")==0) {
@@ -308,6 +312,7 @@ public class BookManager extends javax.swing.JFrame {
 			}
 		});
 		btnSave = new javax.swing.JButton();
+		btnSave.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_save.png"));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 2) {
@@ -325,6 +330,7 @@ public class BookManager extends javax.swing.JFrame {
 			}
 		});
 		btnIrmoge = new javax.swing.JButton();
+		btnIrmoge.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_exit.png"));
 		btnIrmoge.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnIrmoge.setEnabled(false);
@@ -339,6 +345,7 @@ public class BookManager extends javax.swing.JFrame {
 			}
 		});
 		btnExport = new javax.swing.JButton();
+		btnExport.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\Transfer.png"));
 		btnExport.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				bookServicesImpl.exportExcel();

@@ -12,13 +12,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 
 public class TestInputYear {
 	WebDriver driver;
 
-	@Test
+	@Test(groups = "TestYear", priority = 34)
 	public void add_01() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -32,7 +33,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Chỉ nhập Day trong trường txtYear", groups = "txtYear", priority = 43)
+	@Test(description = "Chỉ nhập Day trong trường txtYear", groups = "txtYear", priority = 35)
 	public void Add_02() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -46,7 +47,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Chỉ nhập Day,Month  trong trường txtYear", groups = "txtYear", priority = 44)
+	@Test(description = "Chỉ nhập Day,Month  trong trường txtYear", groups = "txtYear", priority = 36)
 	public void Add_03() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -60,7 +61,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Nhập đủ  trường txtYear 03/05/1996", groups = "txtYear", priority = 45)
+	@Test(description = "Nhập đủ  trường txtYear 03/05/1996", groups = "txtYear", priority =37)
 	public void Add_04() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -74,7 +75,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Nhập trường txtYear 31/12/2000", groups = "txtYear", priority = 46)
+	@Test(description = "Nhập trường txtYear 31/12/2000", groups = "txtYear", priority = 38)
 	public void Add_05() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -89,7 +90,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Nhập trường txtYear 01/01/1999", groups = "txtYear", priority = 47)
+	@Test(description = "Nhập trường txtYear 01/01/1999", groups = "txtYear", priority = 39)
 	public void Add_06() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -104,7 +105,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Nhập trường txtYear 01/01/1950", groups = "txtYear", priority = 48)
+	@Test(description = "Nhập trường txtYear 01/01/1950", groups = "txtYear", priority = 40)
 	public void Add_07() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -119,7 +120,7 @@ public class TestInputYear {
 		}
 	}
 	
-	@Test(description = "Nhập trường txtYear 31/12/1949", groups = "txtYear", priority = 49)
+	@Test(description = "Nhập trường txtYear 31/12/1949", groups = "txtYear", priority = 41)
 	public void Add_08() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -133,7 +134,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Nhập trường txtYear kí tự đặc biệt", groups = "txtYear", priority = 50)
+	@Test(description = "Nhập trường txtYear kí tự đặc biệt", groups = "txtYear", priority =42)
 	public void Add_09() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -147,7 +148,7 @@ public class TestInputYear {
 			fail("FAILL");
 		}
 	}
-	@Test(description = "Nhập trường txtYear kí tự chữ a-zA-z ", groups = "txtYear", priority = 51)
+	@Test(description = "Nhập trường txtYear kí tự chữ a-zA-z ", groups = "txtYear", priority = 43)
 	public void Add_010() {
 		try {
 			WebElement fieldBirthday = driver.findElement(By.id("txtYear"));
@@ -163,10 +164,10 @@ public class TestInputYear {
 	}
 	
 
-//	@AfterMethod
-//	public void afterMethod() {
-//		driver.close();
-//	}
+	@AfterMethod
+	public void afterMethod() {
+		//driver.close();
+	}
 
 	@BeforeTest
 	public void beforeTest() {

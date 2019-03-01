@@ -2,6 +2,7 @@ package com.angile.LibraryTest;
 
 import org.testng.annotations.Test;
 
+import com.angile.Dao.ThemeDAOImpl;
 import com.angile.Service.ThemeServicesImpl;
 
 import org.testng.annotations.BeforeClass;
@@ -13,6 +14,7 @@ import org.testng.annotations.AfterTest;
 
 public class ThemeTest {
 	private static ThemeServicesImpl themeServices;
+	private static ThemeDAOImpl ThemeTest;
 
 	@DataProvider(name = "dataTest")
 	public static Object[][] dataTestTheme() {
@@ -22,7 +24,7 @@ public class ThemeTest {
 	@Test(groups = "Theme", dataProvider = "dataTest")
 	public void addTheme(String name) {
 		boolean kq = themeServices.addTheme(name);
-		Assert.assertEquals(kq,false );
+		Assert.assertEquals(kq,true );
 	}
 
 	@BeforeTest
@@ -32,7 +34,7 @@ public class ThemeTest {
 
 	@AfterTest
 	public void afterTest() {
-		// delete theme
+		ThemeTest.deleteAllTheme();
 	}
 
 }

@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="2" ignored="0" total="55" passed="53">
   <reporter-output>
   </reporter-output>
-  <suite name="Test Suite" duration-ms="10471" started-at="2019-02-25T12:27:30Z" finished-at="2019-02-25T12:27:41Z">
+  <suite name="Test Suite" duration-ms="12025" started-at="2019-02-27T12:08:44Z" finished-at="2019-02-27T12:08:56Z">
     <groups>
       <group name="Book">
         <method signature="BookTest.addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" class="com.angile.LibraryTest.BookTest"/>
@@ -19,157 +19,9 @@
         <method signature="ThemeTest.addTheme(java.lang.String)[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="addTheme" class="com.angile.LibraryTest.ThemeTest"/>
       </group> <!-- Theme -->
     </groups>
-    <test name="Library Test" duration-ms="10471" started-at="2019-02-25T12:27:30Z" finished-at="2019-02-25T12:27:41Z">
+    <test name="Library Test" duration-ms="12025" started-at="2019-02-27T12:08:44Z" finished-at="2019-02-27T12:08:56Z">
       <class name="com.angile.LibraryTest.PlubhingTest">
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[0964365479]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hà N?i]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[khaittph05424@fpt.edu.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NBX Hà N?i]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[0964365479]]>
-              </value>
-            </param>
-            <param index="2">
-              <value is-null="true"/>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[khaittph05424@fpt.edu.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NBX Hà N?i]]>
-              </value>
-            </param>
-            <param index="1">
-              <value is-null="true"/>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hà N?i]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[khaittph05424@fpt.edu.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NBX Hà N?i]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[0964365479]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hà N?i]]>
-              </value>
-            </param>
-            <param index="3">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NBX Hà N?i]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123457984]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hà N?i]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[khaittph05424@fpt.edu.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NBX Hà N?i]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[!@#]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hà N?i]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[khaittph05424@fpt.edu.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -195,33 +47,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[NBX Hà N?i]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[0964365479999]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Hà N?i]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[khaittph05424@fpt.edu.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addPublishing -->
-        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -247,7 +73,155 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPublishing -->
-        <test-method status="FAIL" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="210" started-at="2019-02-25T12:27:41Z" data-provider="DataTest" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NBX Hà N?i]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0964365479]]>
+              </value>
+            </param>
+            <param index="2">
+              <value is-null="true"/>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khaittph05424@fpt.edu.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NBX Hà N?i]]>
+              </value>
+            </param>
+            <param index="1">
+              <value is-null="true"/>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hà N?i]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khaittph05424@fpt.edu.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NBX Hà N?i]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0964365479]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hà N?i]]>
+              </value>
+            </param>
+            <param index="3">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value is-null="true"/>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0964365479]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hà N?i]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khaittph05424@fpt.edu.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NBX Hà N?i]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[0964365479999]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hà N?i]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khaittph05424@fpt.edu.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NBX Hà N?i]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[!@#]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hà N?i]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khaittph05424@fpt.edu.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="246" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -270,57 +244,42 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:568)
-at org.testng.Assert.assertEquals(Assert.java:578)
-at com.angile.LibraryTest.PlubhingTest.addPublishing(PlubhingTest.java:35)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPublishing -->
+        <test-method status="PASS" signature="addPublishing(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="addPublishing" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="DataTest" finished-at="2019-02-27T12:08:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[NBX Hà N?i]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123457984]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Hà N?i]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[khaittph05424@fpt.edu.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addPublishing -->
       </class> <!-- com.angile.LibraryTest.PlubhingTest -->
       <class name="com.angile.LibraryTest.AuthorDaoTestNg">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="573" started-at="2019-02-25T12:27:35Z" finished-at="2019-02-25T12:27:35Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="555" started-at="2019-02-27T12:08:48Z" finished-at="2019-02-27T12:08:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="6" started-at="2019-02-25T12:27:35Z" data-provider="dataTest" finished-at="2019-02-25T12:27:35Z">
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:49Z" data-provider="dataTest" finished-at="2019-02-27T12:08:49Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -344,15 +303,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="557" started-at="2019-02-25T12:27:35Z" finished-at="2019-02-25T12:27:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:35Z" finished-at="2019-02-25T12:27:35Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="15" started-at="2019-02-27T12:08:49Z" finished-at="2019-02-27T12:08:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="2" started-at="2019-02-25T12:27:36Z" data-provider="dataTest" finished-at="2019-02-25T12:27:36Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="559" started-at="2019-02-27T12:08:49Z" finished-at="2019-02-27T12:08:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="1" started-at="2019-02-27T12:08:49Z" data-provider="dataTest" finished-at="2019-02-27T12:08:49Z">
           <params>
             <param index="0">
               <value>
@@ -376,15 +335,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-02-25T12:27:36Z" finished-at="2019-02-25T12:27:36Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:49Z" finished-at="2019-02-27T12:08:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="594" started-at="2019-02-25T12:27:36Z" finished-at="2019-02-25T12:27:37Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="615" started-at="2019-02-27T12:08:49Z" finished-at="2019-02-27T12:08:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="2" started-at="2019-02-25T12:27:37Z" data-provider="dataTest" finished-at="2019-02-25T12:27:37Z">
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:50Z" data-provider="dataTest" finished-at="2019-02-27T12:08:50Z">
           <params>
             <param index="0">
               <value>
@@ -408,15 +367,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="579" started-at="2019-02-25T12:27:37Z" finished-at="2019-02-25T12:27:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:37Z" finished-at="2019-02-25T12:27:37Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:50Z" finished-at="2019-02-27T12:08:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="1" started-at="2019-02-25T12:27:37Z" data-provider="dataTest" finished-at="2019-02-25T12:27:37Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="537" started-at="2019-02-27T12:08:50Z" finished-at="2019-02-27T12:08:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:51Z" finished-at="2019-02-27T12:08:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:51Z" data-provider="dataTest" finished-at="2019-02-27T12:08:51Z">
           <params>
             <param index="0">
               <value>
@@ -440,15 +403,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:37Z" finished-at="2019-02-25T12:27:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="573" started-at="2019-02-25T12:27:37Z" finished-at="2019-02-25T12:27:38Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="571" started-at="2019-02-27T12:08:51Z" finished-at="2019-02-27T12:08:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="1" started-at="2019-02-25T12:27:38Z" data-provider="dataTest" finished-at="2019-02-25T12:27:38Z">
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:51Z" data-provider="dataTest" finished-at="2019-02-27T12:08:51Z">
           <params>
             <param index="0">
               <value>
@@ -474,15 +433,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:38Z" finished-at="2019-02-25T12:27:38Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:51Z" finished-at="2019-02-27T12:08:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="576" started-at="2019-02-25T12:27:38Z" finished-at="2019-02-25T12:27:38Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="527" started-at="2019-02-27T12:08:51Z" finished-at="2019-02-27T12:08:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="1" started-at="2019-02-25T12:27:38Z" data-provider="dataTest" finished-at="2019-02-25T12:27:38Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="604" started-at="2019-02-27T12:08:52Z" finished-at="2019-02-27T12:08:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:52Z" data-provider="dataTest" finished-at="2019-02-27T12:08:52Z">
           <params>
             <param index="0">
               <value>
@@ -508,15 +471,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:38Z" finished-at="2019-02-25T12:27:38Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:52Z" finished-at="2019-02-27T12:08:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="557" started-at="2019-02-25T12:27:38Z" finished-at="2019-02-25T12:27:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-25T12:27:39Z" data-provider="dataTest" finished-at="2019-02-25T12:27:39Z">
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:52Z" data-provider="dataTest" finished-at="2019-02-27T12:08:52Z">
           <params>
             <param index="0">
               <value>
@@ -542,15 +501,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:39Z" finished-at="2019-02-25T12:27:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="535" started-at="2019-02-25T12:27:39Z" finished-at="2019-02-25T12:27:39Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="544" started-at="2019-02-27T12:08:52Z" finished-at="2019-02-27T12:08:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-25T12:27:39Z" data-provider="dataTest" finished-at="2019-02-25T12:27:39Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:52Z" finished-at="2019-02-27T12:08:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:53Z" data-provider="dataTest" finished-at="2019-02-27T12:08:53Z">
           <params>
             <param index="0">
               <value>
@@ -576,15 +535,23 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:39Z" finished-at="2019-02-25T12:27:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="568" started-at="2019-02-25T12:27:39Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="553" started-at="2019-02-27T12:08:53Z" finished-at="2019-02-27T12:08:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:53Z" finished-at="2019-02-27T12:08:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:53Z" finished-at="2019-02-27T12:08:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="600" started-at="2019-02-27T12:08:53Z" finished-at="2019-02-27T12:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="0" started-at="2019-02-27T12:08:53Z" data-provider="dataTest" finished-at="2019-02-27T12:08:53Z">
           <params>
             <param index="0">
               <value>
@@ -610,15 +577,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="beforeMethod" is-config="true" duration-ms="540" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addAuthor(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="addAuthor" duration-ms="2" started-at="2019-02-27T12:08:54Z" data-provider="dataTest" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -644,25 +603,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addAuthor -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.angile.LibraryTest.AuthorDaoTestNg@3532ec19]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- com.angile.LibraryTest.AuthorDaoTestNg -->
       <class name="com.angile.LibraryTest.BookTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="beforeTest" is-config="true" duration-ms="3037" started-at="2019-02-25T12:27:30Z" finished-at="2019-02-25T12:27:33Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="beforeTest" is-config="true" duration-ms="3594" started-at="2019-02-27T12:08:44Z" finished-at="2019-02-27T12:08:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="beforeTest" is-config="true" duration-ms="750" started-at="2019-02-25T12:27:33Z" finished-at="2019-02-25T12:27:34Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="beforeTest" is-config="true" duration-ms="598" started-at="2019-02-27T12:08:47Z" finished-at="2019-02-27T12:08:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="beforeTest" is-config="true" duration-ms="613" started-at="2019-02-25T12:27:34Z" finished-at="2019-02-25T12:27:35Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="beforeTest" is-config="true" duration-ms="574" started-at="2019-02-27T12:08:48Z" finished-at="2019-02-27T12:08:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="238" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value is-null="true"/>
@@ -711,15 +674,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="28" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -768,7 +727,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="25" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="2" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -817,11 +780,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="24" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -870,15 +833,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="24" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="1" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -927,7 +886,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="28" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -976,15 +939,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="25" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -1033,11 +992,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="24" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -1086,7 +1045,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="26" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-27T12:08:54Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:54Z">
           <params>
             <param index="0">
               <value>
@@ -1135,11 +1098,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="18" started-at="2019-02-27T12:08:54Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1190,15 +1157,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="16" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="1" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1249,7 +1212,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest1" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest1" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1300,15 +1263,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="16" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1359,7 +1318,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1410,15 +1373,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="32" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="2" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="15" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1469,11 +1432,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1524,11 +1487,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="32" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1579,11 +1542,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1634,11 +1593,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="15" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="16" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1689,7 +1648,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="16" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1740,15 +1703,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="21" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1799,7 +1762,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="2" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="47" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1850,15 +1817,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:40Z" finished-at="2019-02-25T12:27:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="1" started-at="2019-02-25T12:27:40Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:40Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1909,7 +1872,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="dataTest2" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook2(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook2" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest2" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -1960,15 +1923,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook2 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2019,11 +1978,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="32" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2074,11 +2033,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="13" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2129,7 +2088,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="36" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2180,11 +2143,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="18" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2235,11 +2198,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="16" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="15" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2290,11 +2253,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="32" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAll -->
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2345,11 +2312,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="31" started-at="2019-02-27T12:08:55Z" finished-at="2019-02-27T12:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2400,15 +2367,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="deleteAll()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="deleteAll" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAll -->
-        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest3" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="addBook3(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="addBook3" duration-ms="0" started-at="2019-02-27T12:08:55Z" data-provider="dataTest3" finished-at="2019-02-27T12:08:55Z">
           <params>
             <param index="0">
               <value>
@@ -2459,21 +2418,52 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBook3 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="FAIL" signature="afterTest()[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:56Z" finished-at="2019-02-27T12:08:56Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.angile.LibraryTest.ThemeTest.afterTest(ThemeTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.afterRun(TestRunner.java:725)
+at org.testng.TestRunner.run(TestRunner.java:509)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.angile.LibraryTest.PlubhingTest@5e5792a0]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:56Z" finished-at="2019-02-27T12:08:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-02-25T12:27:41Z" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.angile.LibraryTest.BookTest@3ffc5af1]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-02-27T12:08:56Z" finished-at="2019-02-27T12:08:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.angile.LibraryTest.BookTest -->
       <class name="com.angile.LibraryTest.ThemeTest">
-        <test-method status="FAIL" signature="addTheme(java.lang.String)[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="addTheme" duration-ms="77" started-at="2019-02-25T12:27:41Z" data-provider="dataTest" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="FAIL" signature="addTheme(java.lang.String)[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="addTheme" duration-ms="125" started-at="2019-02-27T12:08:55Z" data-provider="dataTest" finished-at="2019-02-27T12:08:56Z">
           <params>
             <param index="0">
               <value>
@@ -2483,17 +2473,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [false] but found [true]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:568)
 at org.testng.Assert.assertEquals(Assert.java:578)
-at com.angile.LibraryTest.ThemeTest.addTheme(ThemeTest.java:25)
+at com.angile.LibraryTest.ThemeTest.addTheme(ThemeTest.java:27)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -2525,12 +2515,53 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTheme -->
-        <test-method status="PASS" signature="addTheme(java.lang.String)[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="addTheme" duration-ms="1" started-at="2019-02-25T12:27:41Z" data-provider="dataTest" finished-at="2019-02-25T12:27:41Z">
+        <test-method status="FAIL" signature="addTheme(java.lang.String)[pri:0, instance:com.angile.LibraryTest.ThemeTest@26653222]" name="addTheme" duration-ms="0" started-at="2019-02-27T12:08:56Z" data-provider="dataTest" finished-at="2019-02-27T12:08:56Z">
           <params>
             <param index="0">
               <value is-null="true"/>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:568)
+at org.testng.Assert.assertEquals(Assert.java:578)
+at com.angile.LibraryTest.ThemeTest.addTheme(ThemeTest.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addTheme -->

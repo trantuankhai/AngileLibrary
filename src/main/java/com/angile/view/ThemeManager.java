@@ -22,6 +22,7 @@ import javax.swing.JMenuItem;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -143,7 +144,9 @@ public class ThemeManager extends javax.swing.JFrame {
 
 		jButton6 = new javax.swing.JButton();
 		btnAdd = new javax.swing.JButton();
+		btnAdd.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_add.png"));
 		btnEdit = new javax.swing.JButton();
+		btnEdit.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\edit.png"));
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				switchEmnable(true);
@@ -153,6 +156,7 @@ public class ThemeManager extends javax.swing.JFrame {
 			}
 		});
 		btnDelete = new javax.swing.JButton();
+		btnDelete.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_delete.png"));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa không") == 0) {
@@ -162,6 +166,7 @@ public class ThemeManager extends javax.swing.JFrame {
 			}
 		});
 		btnBoqua = new javax.swing.JButton();
+		btnBoqua.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_exit.png"));
 		btnBoqua.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 1) {
@@ -177,6 +182,7 @@ public class ThemeManager extends javax.swing.JFrame {
 			}
 		});
 		btnSave = new javax.swing.JButton();
+		btnSave.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_save.png"));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 1) {
@@ -193,6 +199,7 @@ public class ThemeManager extends javax.swing.JFrame {
 			}
 		});
 		btnExport = new javax.swing.JButton();
+		btnExport.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\Transfer.png"));
 		jLabel1 = new javax.swing.JLabel();
 		jLabel2 = new javax.swing.JLabel();
 		jLabel3 = new javax.swing.JLabel();
@@ -214,6 +221,7 @@ public class ThemeManager extends javax.swing.JFrame {
 			}
 		});
 		btnSearch = new javax.swing.JButton();
+		btnSearch.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_search.png"));
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tfSearchTheme.getText().equals(""))
@@ -334,79 +342,83 @@ public class ThemeManager extends javax.swing.JFrame {
 		setJMenuBar(jMenuBar1);
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-		layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING)
-				.addGroup(layout.createSequentialGroup().addContainerGap(310, Short.MAX_VALUE)
-						.addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 231, GroupLayout.PREFERRED_SIZE).addGap(159))
-				.addGroup(layout.createSequentialGroup().addGap(27).addGroup(layout
-						.createParallelGroup(Alignment.LEADING)
-						.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+		layout.setHorizontalGroup(
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup()
+					.addContainerGap(379, Short.MAX_VALUE)
+					.addComponent(jLabel4, GroupLayout.PREFERRED_SIZE, 231, GroupLayout.PREFERRED_SIZE)
+					.addGap(159))
+				.addGroup(layout.createSequentialGroup()
+					.addGap(27)
+					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+						.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 730, Short.MAX_VALUE)
 						.addGroup(layout.createSequentialGroup()
+							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+								.addGroup(layout.createSequentialGroup()
+									.addGroup(layout.createParallelGroup(Alignment.LEADING)
+										.addComponent(jLabel2)
+										.addComponent(jLabel1))
+									.addGap(108)
+									.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+										.addGroup(Alignment.LEADING, layout.createSequentialGroup()
+											.addComponent(tfSearchTheme, GroupLayout.PREFERRED_SIZE, 185, GroupLayout.PREFERRED_SIZE)
+											.addGap(18)
+											.addComponent(btnSearch, GroupLayout.PREFERRED_SIZE, 97, Short.MAX_VALUE))
+										.addComponent(tfNameTheme, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+										.addComponent(tfCodeTheme, GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE))
+									.addGap(18))
+								.addGroup(layout.createSequentialGroup()
+									.addComponent(jLabel3)
+									.addPreferredGap(ComponentPlacement.RELATED, 440, Short.MAX_VALUE)))
+							.addGap(28)
+							.addGroup(layout.createParallelGroup(Alignment.TRAILING)
 								.addGroup(layout.createParallelGroup(Alignment.LEADING)
-										.addGroup(layout.createSequentialGroup()
-												.addGroup(layout.createParallelGroup(Alignment.LEADING)
-														.addComponent(jLabel2).addComponent(jLabel1))
-												.addGap(108)
-												.addGroup(layout.createParallelGroup(Alignment.LEADING)
-														.addGroup(layout.createSequentialGroup()
-																.addComponent(tfSearchTheme, GroupLayout.PREFERRED_SIZE,
-																		185, GroupLayout.PREFERRED_SIZE)
-																.addGap(18).addComponent(btnSearch))
-														.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
-																.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-																		.addComponent(tfNameTheme, Alignment.LEADING,
-																				GroupLayout.DEFAULT_SIZE, 289,
-																				Short.MAX_VALUE)
-																		.addComponent(tfCodeTheme,
-																				GroupLayout.DEFAULT_SIZE, 289,
-																				Short.MAX_VALUE))
-																.addGap(18))))
-										.addGroup(layout.createSequentialGroup().addComponent(jLabel3)
-												.addPreferredGap(ComponentPlacement.RELATED, 440, Short.MAX_VALUE)))
-								.addGap(28)
-								.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-										.addGroup(layout.createSequentialGroup()
-												.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-														.addComponent(btnAdd, GroupLayout.PREFERRED_SIZE, 83,
-																GroupLayout.PREFERRED_SIZE)
-														.addComponent(btnEdit, GroupLayout.PREFERRED_SIZE, 83,
-																GroupLayout.PREFERRED_SIZE))
-												.addPreferredGap(ComponentPlacement.UNRELATED)
-												.addGroup(layout.createParallelGroup(Alignment.LEADING)
-														.addComponent(btnSave, GroupLayout.PREFERRED_SIZE, 83,
-																GroupLayout.PREFERRED_SIZE)
-														.addComponent(btnDelete, GroupLayout.PREFERRED_SIZE, 83,
-																GroupLayout.PREFERRED_SIZE)))
-										.addGroup(layout.createSequentialGroup().addComponent(btnExport)
-												.addPreferredGap(ComponentPlacement.UNRELATED).addComponent(btnBoqua,
-														GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)))))
-						.addContainerGap()));
-		layout.setVerticalGroup(layout.createParallelGroup(Alignment.TRAILING).addGroup(layout.createSequentialGroup()
-				.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(jLabel4).addGap(25)
-				.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+									.addComponent(btnAdd, GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
+									.addComponent(btnEdit, GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE))
+								.addComponent(btnExport))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+								.addComponent(btnSave, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(btnBoqua, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+								.addComponent(btnDelete, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+					.addContainerGap())
+		);
+		layout.setVerticalGroup(
+			layout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(layout.createSequentialGroup()
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addComponent(jLabel4)
+					.addGap(25)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(jLabel1, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-						.addComponent(tfCodeTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-								GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnDelete).addComponent(btnAdd))
-				.addGroup(layout.createParallelGroup(Alignment.LEADING)
-						.addGroup(layout.createSequentialGroup().addGap(15)
+						.addComponent(tfCodeTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnAdd)
+						.addComponent(btnDelete))
+					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+						.addGroup(layout.createSequentialGroup()
+							.addGap(15)
+							.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(tfNameTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+								.addComponent(jLabel2))
+							.addGap(18)
+							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+								.addComponent(jLabel3)
 								.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-										.addComponent(tfNameTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-												GroupLayout.PREFERRED_SIZE)
-										.addComponent(jLabel2))
-								.addGap(18)
-								.addGroup(layout.createParallelGroup(Alignment.LEADING).addComponent(jLabel3)
-										.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-												.addComponent(tfSearchTheme, GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-												.addComponent(btnSearch))))
-						.addGroup(layout.createSequentialGroup().addGap(18)
-								.addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(btnSave)
-										.addComponent(btnEdit))
-								.addPreferredGap(ComponentPlacement.UNRELATED)
-								.addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(btnBoqua)
-										.addComponent(btnExport))))
-				.addGap(18).addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
-				.addGap(75)));
+									.addComponent(tfSearchTheme, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+									.addComponent(btnSearch))))
+						.addGroup(layout.createSequentialGroup()
+							.addGap(18)
+							.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(btnEdit)
+								.addComponent(btnSave))
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+								.addComponent(btnBoqua)
+								.addComponent(btnExport))))
+					.addGap(18)
+					.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 208, GroupLayout.PREFERRED_SIZE)
+					.addGap(75))
+		);
 		getContentPane().setLayout(layout);
 
 		pack();

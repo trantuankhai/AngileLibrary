@@ -14,6 +14,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.ImageIcon;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle.ComponentPlacement;
 
 /**
  *
@@ -184,6 +188,7 @@ public class AuthorManager extends javax.swing.JFrame {
 		tfEmailAuthor = new javax.swing.JTextField();
 		jTextField6 = new javax.swing.JTextField();
 		jButton1 = new javax.swing.JButton();
+		jButton1.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_search.png"));
 		jButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				if(jTextField6.getText().equals(""))
@@ -196,6 +201,7 @@ public class AuthorManager extends javax.swing.JFrame {
 			}
 		});
 		btnEdit = new javax.swing.JButton();
+		btnEdit.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\edit.png"));
 		btnEdit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				swithEmnable(true);
@@ -205,6 +211,7 @@ public class AuthorManager extends javax.swing.JFrame {
 			}
 		});
 		btnExport = new javax.swing.JButton();
+		btnExport.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\Transfer.png"));
 		btnExport.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xuất báo cáo") == 0) {
@@ -218,6 +225,7 @@ public class AuthorManager extends javax.swing.JFrame {
 			}
 		});
 		btnBoqua = new javax.swing.JButton();
+		btnBoqua.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_exit.png"));
 		btnBoqua.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 1) {
@@ -233,6 +241,7 @@ public class AuthorManager extends javax.swing.JFrame {
 			}
 		});
 		btnDelete = new javax.swing.JButton();
+		btnDelete.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_delete.png"));
 		btnDelete.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (JOptionPane.showConfirmDialog(null, "Ban có muốn xóa không ?") == 0) {
@@ -242,6 +251,7 @@ public class AuthorManager extends javax.swing.JFrame {
 			}
 		});
 		btnAdd = new javax.swing.JButton();
+		btnAdd.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_add.png"));
 		btnAdd.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				swithEmnable(true);
@@ -254,6 +264,7 @@ public class AuthorManager extends javax.swing.JFrame {
 			}
 		});
 		btnSave = new javax.swing.JButton();
+		btnSave.setIcon(new ImageIcon("D:\\Angile Quan Ly Thu Vien\\AngileLibrary\\Icon\\btn_save.png"));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (flag == 1) {
@@ -363,88 +374,88 @@ public class AuthorManager extends javax.swing.JFrame {
 		setJMenuBar(jMenuBar1);
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-		getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-				.addGroup(layout.createSequentialGroup().addGap(34, 34, 34).addGroup(layout
-						.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(jScrollPane1)
+		layout.setHorizontalGroup(
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup()
+					.addGap(34)
+					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+						.addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
 						.addGroup(layout.createSequentialGroup()
-								.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-												.addComponent(jLabel4)
-												.addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
-										.addComponent(jLabel7))
-								.addGap(34, 34, 34)
-								.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-										.addGroup(layout
-												.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-												.addComponent(tfAddressAuthor,
-														javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(tfPhoneAuthor, javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(tfEmailAuthor, javax.swing.GroupLayout.Alignment.LEADING)
-												.addGroup(javax.swing.GroupLayout.Alignment.LEADING,
-														layout.createSequentialGroup().addGap(66, 66, 66)
-																.addComponent(jLabel1))
-												.addComponent(tfNameAuthor, javax.swing.GroupLayout.Alignment.LEADING)
-												.addGroup(layout.createSequentialGroup()
-														.addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE,
-																274, Short.MAX_VALUE)
-														.addGap(18, 18, 18).addComponent(jButton1)))
-										.addComponent(tfCodeAuthor, javax.swing.GroupLayout.PREFERRED_SIZE, 379,
-												javax.swing.GroupLayout.PREFERRED_SIZE))
-								.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16,
-										Short.MAX_VALUE)
-								.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-										.addGroup(layout
-												.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-												.addComponent(btnBoqua, javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-												.addComponent(btnDelete, javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-												.addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-												.addComponent(btnEdit, javax.swing.GroupLayout.DEFAULT_SIZE,
-														javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-												.addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 73,
-														javax.swing.GroupLayout.PREFERRED_SIZE))
-										.addComponent(btnExport))))
-						.addContainerGap()));
-		layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
-				.createSequentialGroup().addContainerGap().addComponent(jLabel1).addGap(8, 8, 8)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(jLabel2)
-						.addComponent(tfCodeAuthor, javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+								.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+									.addComponent(jLabel4)
+									.addComponent(jLabel3, Alignment.LEADING)
+									.addComponent(jLabel2, Alignment.LEADING)
+									.addComponent(jLabel5, Alignment.LEADING)
+									.addComponent(jLabel6, Alignment.LEADING))
+								.addComponent(jLabel7))
+							.addGap(34)
+							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+								.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+									.addComponent(tfAddressAuthor)
+									.addComponent(tfPhoneAuthor)
+									.addComponent(tfEmailAuthor)
+									.addGroup(layout.createSequentialGroup()
+										.addGap(66)
+										.addComponent(jLabel1))
+									.addComponent(tfNameAuthor)
+									.addGroup(layout.createSequentialGroup()
+										.addComponent(jTextField6, GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+										.addGap(18)
+										.addComponent(jButton1)))
+								.addComponent(tfCodeAuthor, GroupLayout.PREFERRED_SIZE, 379, GroupLayout.PREFERRED_SIZE))
+							.addPreferredGap(ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+								.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+									.addComponent(btnBoqua, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(btnDelete, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(btnSave, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(btnEdit, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+									.addComponent(btnAdd))
+								.addComponent(btnExport))))
+					.addContainerGap())
+		);
+		layout.setVerticalGroup(
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup()
+					.addContainerGap()
+					.addComponent(jLabel1)
+					.addGap(8)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jLabel2)
+						.addComponent(tfCodeAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnAdd))
-				.addGap(18, 18, 18)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(jLabel3)
-						.addComponent(tfNameAuthor, javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jLabel3)
+						.addComponent(tfNameAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnEdit))
-				.addGap(13, 13, 13)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(jLabel4)
-						.addComponent(tfPhoneAuthor, javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+					.addGap(13)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jLabel4)
+						.addComponent(tfPhoneAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnDelete))
-				.addGap(18, 18, 18)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-						.addComponent(tfAddressAuthor, javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addComponent(jLabel5).addComponent(btnSave))
-				.addGap(17, 17, 17)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-						.addComponent(tfEmailAuthor, javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addComponent(jLabel6).addComponent(btnBoqua))
-				.addGap(18, 18, 18)
-				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(jLabel7)
-						.addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE,
-								javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addComponent(jButton1).addComponent(btnExport))
-				.addGap(31, 31, 31).addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 147,
-						javax.swing.GroupLayout.PREFERRED_SIZE)
-				.addContainerGap(19, Short.MAX_VALUE)));
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(tfAddressAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabel5)
+						.addComponent(btnSave))
+					.addGap(17)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(tfEmailAuthor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jLabel6)
+						.addComponent(btnBoqua))
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(jLabel7)
+						.addComponent(jTextField6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(jButton1)
+						.addComponent(btnExport))
+					.addGap(31)
+					.addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 147, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(19, Short.MAX_VALUE))
+		);
+		getContentPane().setLayout(layout);
 
 		pack();
 		setLocationRelativeTo(null);
